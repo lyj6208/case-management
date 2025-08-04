@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: case-management
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    url: ${DB_URL}
+    username: ${USERNAME}
+    password: ${PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    baselineOnMigrate: true
+
+logging:
+  level:
+    root: INFO
+  file:
+    name: logs/application.log

@@ -1,0 +1,206 @@
+package com.testing_company.case_management.service;
+
+import com.testing_company.case_management.dto.TestCaseResponseDTO;
+import com.testing_company.case_management.enums.CaseStatus;
+import com.testing_company.case_management.enums.SampleStatus;
+import com.testing_company.case_management.exception.NotFoundException;
+import com.testing_company.case_management.model.*;
+import com.testing_company.case_management.repository.*;
+import com.testing_company.case_management.util.BeanUtil;
+import com.testing_company.case_management.util.LogUtils;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Optional;
+
+@Service
+@Slf4j
+@AllArgsConstructor
+public class TestCaseService {
+    private final TestCaseRepository testCaseRepository;
+    private final TestItemRepository testItemRepository;
+    private final CustomerRepository customerRepository;
+    private final PointOfContactRepository pointOfContactRepository;
+    private final UserRepository userRepository;
+    private final TeamRepository teamRepository;
+    private final DepartmentRepository departmentRepository;
+
+    public TestCase createTestCase(TestCase testCase){
+        LogUtils.logRequest(log,this,"建立TestCase：{}"+testCase);
+        Long nextNumber= Optional.ofNullable(testCaseRepository.findMaxCaseNumber()).orElse(0L)+1;
+        String formattedNumber=String.format("%07d",nextNumber);
+
+        TestItem testItem= BeanUtil.findIfIdPresent(testCase.getTestItemId(),testItemRepository::findById);
+        Team team=BeanUtil.findIfIdPresent(testItem.getTeamId(),teamRepository::findById);
+        Department department=BeanUtil.findIfIdPresent(team.getDepartmentId(),departmentRepository::findById);
+        testCase.setTestCaseNumber(department.getAbbreviation()+formattedNumber);
+
+        if(testCase.getTestingDays()==null){testCase.setTestingDays(testItem.getTestingDays());};
+        if(testCase.getTestingPrice()==null){testCase.setTestingPrice(testItem.getTestingPrice());};
+        testCase.setCaseStatus(CaseStatus.CASE_CREATED);
+        testCase.setSampleStatus(SampleStatus.AWAITING_DELIVERY);
+
+        TestCase createdTestCase=testCaseRepository.save(testCase);
+        LogUtils.logResponse(log,this,"建立TestCase：{}"+testCase);
+        return createdTestCase;
+    }
+    public TestCaseResponseDTO findTestCaseById(Long testCaseId){
+        LogUtils.logRequest(log,this,"尋找TestCase_ID：{}"+testCaseId);
+        TestCase foundTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        LogUtils.logResponse(log,this,"尋找TestCase_ID：{}"+testCaseId);
+        return convertToDTO(foundTestCase);
+    }
+    public Page<TestCaseResponseDTO> findTestCasesByCustom(Pageable pageable, LocalDate caseStartDate_Begin, LocalDate caseStartDate_End){
+        LogUtils.logRequest(log,this,"尋找特定條件之TestCase");
+        LocalDate today=LocalDate.now();
+        Timestamp begin=caseStartDate_Begin!=null
+                ?Timestamp.valueOf(caseStartDate_Begin.atStartOfDay()):Timestamp.valueOf(today.atStartOfDay());
+        Timestamp end=caseStartDate_End!=null
+                ?Timestamp.valueOf(caseStartDate_End.plusDays(1).atStartOfDay()):Timestamp.valueOf(today.plusDays(1).atStartOfDay());
+
+
+        Page<TestCase>foundTestCases=testCaseRepository.findByCaseStartTimeBetween(begin, end, pageable);
+        LogUtils.logResponse(log,this,"尋找特定條件之TestCase");
+        return foundTestCases.map(this::convertToDTO);
+    }
+    public TestCaseResponseDTO updateTestCase(Long testCaseId, TestCase inputtedTestCase){
+        LogUtils.logRequest(log,this,"更新TestCase_ID：{}"+testCaseId);
+        TestCase updatedTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        BeanUtil.copyNotNullProperties(inputtedTestCase, updatedTestCase);
+        testCaseRepository.save(updatedTestCase);
+        LogUtils.logResponse(log,this,"更新TestCase_ID：{}"+testCaseId);
+        return convertToDTO(updatedTestCase);
+    }
+    public TestCaseResponseDTO startTestCase(Long testCaseId, Double sampleOriginWeight){
+        LogUtils.logRequest(log,this,"啟動TestCase_ID：{}"+testCaseId);
+        TestCase testCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        testCase.setCaseStartTime(Timestamp.valueOf(LocalDateTime.now()));
+        testCase.setLabDeadline(Timestamp.valueOf(LocalDateTime.now().plusDays(testCase.getTestingDays()-2)));
+        testCase.setReportDeadline(Timestamp.valueOf(LocalDateTime.now().plusDays(testCase.getTestingDays())));
+        testCase.setCaseStatus(CaseStatus.IN_PROGRESS);
+        testCase.setSampleStatus(SampleStatus.PENDING_TESTING_AREA);
+        testCase.setSampleOriginalWeight(sampleOriginWeight);
+        testCaseRepository.save(testCase);
+        LogUtils.logResponse(log,this,"啟動TestCase_ID：{}"+testCaseId);
+        return convertToDTO(testCase);
+
+    }
+    public TestCaseResponseDTO assignTestCase(Long testCaseId, Long userId){
+        LogUtils.logRequest(log,this,"指派TestCase_ID：{}"+testCaseId);
+        TestCase assignedTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        User assingedUser=userRepository.findById(userId).orElseThrow(()->new NotFoundException("找不到ID為"+userId+"之User"));
+        assignedTestCase.setExperimentConductorId(assingedUser.getId());
+        testCaseRepository.save(assignedTestCase);
+        LogUtils.logResponse(log,this,"指派TestCase_ID：{}"+testCaseId);
+        return convertToDTO(assignedTestCase);
+    }
+    public TestCaseResponseDTO collectSample(Long testCaseId){
+        LogUtils.logRequest(log,this,"取出樣品TestCase_ID：{}"+testCaseId);
+        TestCase collectedTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        collectedTestCase.setSampleStatus(SampleStatus.LAB_COLLECTED);
+        testCaseRepository.save(collectedTestCase);
+        LogUtils.logResponse(log,this,"取出樣品TestCase_ID：{}"+testCaseId);
+        return convertToDTO(collectedTestCase);
+    }
+    public TestCaseResponseDTO returnSample(Long testCaseId, Double sampleRemainingWeight){
+        LogUtils.logRequest(log,this,"歸還樣品TestCase_ID：{}"+testCaseId);
+        TestCase returnedTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        returnedTestCase.setSampleStatus(SampleStatus.STORAGE_AREA);
+        returnedTestCase.setSampleRemainingWeight(sampleRemainingWeight);
+        testCaseRepository.save(returnedTestCase);
+        LogUtils.logResponse(log,this,"歸還樣品TestCase_ID：{}"+testCaseId);
+        return convertToDTO(returnedTestCase);
+    }
+    public TestCaseResponseDTO submitTestCaseToReview(Long testCaseId, String testResult){
+        LogUtils.logRequest(log,this,"提交TestCase_ID：{}至審核"+testCaseId);
+        TestCase submittedTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        submittedTestCase.setCaseStatus(CaseStatus.UNDER_REVIEW);
+        submittedTestCase.setTestResult(testResult);
+        submittedTestCase.setExperimentEndTime(Timestamp.valueOf(LocalDateTime.now()));
+        testCaseRepository.save(submittedTestCase);
+        LogUtils.logResponse(log,this,"提交TestCase_ID：{}至審核"+testCaseId);
+        return convertToDTO(submittedTestCase);
+    }
+    public TestCaseResponseDTO withdrawTestCaseToExperiment(Long testCaseId){
+        LogUtils.logRequest(log,this,"退回TestCase_ID：{}至實驗"+testCaseId);
+        TestCase withdrawnTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        withdrawnTestCase.setCaseStatus(CaseStatus.IN_PROGRESS);
+        withdrawnTestCase.setTestResult(null);
+        withdrawnTestCase.setExperimentEndTime(null);
+        testCaseRepository.save(withdrawnTestCase);
+        LogUtils.logResponse(log,this,"退回TestCase_ID：{}至實驗"+testCaseId);
+        return convertToDTO(withdrawnTestCase);
+    }
+    public TestCaseResponseDTO submitTestCaseToReport(Long testCaseId){
+        LogUtils.logRequest(log,this,"提交TestCase_ID：{}至報告組"+testCaseId);
+        TestCase submittedTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        submittedTestCase.setCaseStatus(CaseStatus.REPORT_IN_PREPARATION);
+        submittedTestCase.setExperimentReviewTime(Timestamp.valueOf(LocalDateTime.now()));
+        testCaseRepository.save(submittedTestCase);
+        LogUtils.logResponse(log,this,"提交TestCase_ID：{}至報告組"+testCaseId);
+        return convertToDTO(submittedTestCase);
+    }
+    public TestCaseResponseDTO finishTestCaseReport(Long testCaseId){
+        LogUtils.logRequest(log,this,"完成TestCase_ID：{}之報告"+testCaseId);
+        TestCase finishedTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        finishedTestCase.setReportCloseTime(Timestamp.valueOf(LocalDateTime.now()));
+        finishedTestCase.setCaseStatus(CaseStatus.CLOSED);
+        testCaseRepository.save(finishedTestCase);
+        LogUtils.logResponse(log,this,"完成TestCase_ID：{}之報告"+testCaseId);
+        return convertToDTO(finishedTestCase);
+    }
+    public TestCaseResponseDTO convertToDTO(TestCase testCase){
+        Customer customer= BeanUtil.findIfIdPresent(testCase.getCustomerId(),customerRepository::findById);
+        PointOfContact pointOfContact=BeanUtil.findIfIdPresent(testCase.getPointOfContactId(),pointOfContactRepository::findById);
+        TestItem testItem=BeanUtil.findIfIdPresent(testCase.getTestItemId(),testItemRepository::findById);
+        User experimentConductor=BeanUtil.findIfIdPresent(testCase.getExperimentConductorId(),userRepository::findById);
+        User experimentReviewer=BeanUtil.findIfIdPresent(testCase.getExperimentReviewerId(),userRepository::findById);
+        User reportConductor=BeanUtil.findIfIdPresent(testCase.getReportConductorId(),userRepository::findById);
+        User caseHandler=BeanUtil.findIfIdPresent(testCase.getCaseHandlerId(),userRepository::findById);
+        User modifier=BeanUtil.findIfIdPresent(testCase.getLastModifiedById(),userRepository::findById);
+        Team team=BeanUtil.findIfIdPresent(testItem.getTeamId(), teamRepository::findById);
+        Department department=BeanUtil.findIfIdPresent(team.getDepartmentId(), departmentRepository::findById);
+
+        return TestCaseResponseDTO.builder()
+                .id(testCase.getId())
+                .testCaseNumber(testCase.getTestCaseNumber())
+                .customer(customer!=null?customer.getName():null)
+                .pointOfContact_person(pointOfContact!=null?pointOfContact.getContactPerson():null)
+                .pointOfContact_email(pointOfContact!=null?pointOfContact.getContactEmail():null)
+                .pointOfContact_phone(pointOfContact!=null?pointOfContact.getContactPhone():null)
+                .pointOfContact_address(pointOfContact!=null?pointOfContact.getContactAddress():null)
+                .sampleName(testCase.getSampleName())
+                .testItem_name(testItem!=null?testItem.getName():null)
+                .testingDays(testCase.getTestingDays())
+                .testingPrice(testCase.getTestingPrice())
+                .department(department!=null?department.getDepartment():null)
+                .team(team!=null?team.getTeam():null)
+                .caseStartTime(testCase.getCaseStartTime())
+                .experimentEndTime(testCase.getExperimentEndTime())
+                .experimentReviewTime(testCase.getExperimentReviewTime())
+                .reportCloseTime(testCase.getReportCloseTime())
+                .labDeadline(testCase.getLabDeadline())
+                .reportDeadline(testCase.getReportDeadline())
+                .experimentConductor(experimentConductor!=null? experimentConductor.getEmployeeNumber()+"_"+experimentConductor.getName() :null)
+                .experimentReviewer(experimentReviewer!=null?experimentReviewer.getEmployeeNumber()+"_"+experimentReviewer.getName():null)
+                .reportConductor(reportConductor!=null?reportConductor.getEmployeeNumber()+"_"+reportConductor.getName():null)
+                .testResult(testCase.getTestResult())
+                .caseStatus(testCase.getCaseStatus().getDisplayName())
+                .sampleStatus(testCase.getSampleStatus().getDisplayName())
+                .sampleOriginalWeight(testCase.getSampleOriginalWeight())
+                .sampleRemainingWeight(testCase.getSampleRemainingWeight())
+                .caseHandler(caseHandler!=null?caseHandler.getEmployeeNumber()+"_"+caseHandler.getName():null)
+                .note(testCase.getNote())
+                .createdTime(testCase.getCreatedTime())
+                .lastModifiedTime(testCase.getLastModifiedTime())
+                .lastModifiedBy(modifier!=null? modifier.getEmployeeNumber()+"_"+modifier.getName():null)
+                .build();
+    }
+}

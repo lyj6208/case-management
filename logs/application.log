@@ -1,0 +1,374 @@
+2025-08-04 09:06:32 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 9620 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
+2025-08-04 09:06:32 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-04 09:06:32 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-04 09:06:32 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-04 09:06:36 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-04 09:06:36 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 298 ms. Found 9 JPA repository interfaces.
+2025-08-04 09:06:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-04 09:06:39 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-04 09:06:39 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-04 09:06:39 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-04 09:06:39 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6630 ms
+2025-08-04 09:06:40 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-04 09:06:42 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7fd59055
+2025-08-04 09:06:42 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-04 09:06:42 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
+2025-08-04 09:06:42 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2025-08-04 09:06:42 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.223s)
+2025-08-04 09:06:42 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
+2025-08-04 09:06:42 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
+2025-08-04 09:06:43 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-04 09:06:43 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-04 09:06:43 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-04 09:06:44 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-04 09:06:45 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-04 09:06:49 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-04 09:06:49 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 09:06:52 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-04 09:06:55 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-04 09:06:55 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-04 09:06:56 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 09:06:57 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 27.389 seconds (process running for 29.989)
+2025-08-04 09:07:26 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 09:07:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-04 09:07:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-08-04 09:07:26 [http-nio-8080-exec-1] INFO  c.t.c.controller.JobLevelController - [收到請求]建立JobLevel：JobLevel(id=null, jobLevel=CEO)  [來自]類別：JobLevelController，方法：logRequest
+2025-08-04 09:07:26 [http-nio-8080-exec-1] INFO  c.t.c.controller.JobLevelController - [收到請求]建立JobLevel：JobLevel(id=null, jobLevel=CEO)  [來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 09:07:26 [http-nio-8080-exec-1] INFO  c.t.c.service.JobLevelService - [處理請求]準備儲存JobLevel：JobLevel(id=null, jobLevel=CEO)  [來自]類別：JobLevelService，方法：createJobLevel
+2025-08-04 09:07:26 [http-nio-8080-exec-1] INFO  c.t.c.service.JobLevelService - [回傳請求]儲存成功，ID 為: 4  [來自]類別：JobLevelService，方法：createJobLevel
+2025-08-04 09:07:26 [http-nio-8080-exec-1] INFO  c.t.c.controller.JobLevelController - [回傳請求]成功建立JobLevel，ID為：4  [來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 09:19:46 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 09:19:47 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-04 09:19:47 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 09:19:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-04 09:19:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-04 09:19:55 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 13488 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
+2025-08-04 09:19:55 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-04 09:19:56 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-04 09:19:56 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-04 09:19:58 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-04 09:19:58 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 205 ms. Found 9 JPA repository interfaces.
+2025-08-04 09:19:59 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-04 09:20:00 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-04 09:20:00 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-04 09:20:00 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-04 09:20:00 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4090 ms
+2025-08-04 09:20:00 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-04 09:20:01 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70819928
+2025-08-04 09:20:01 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-04 09:20:01 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
+2025-08-04 09:20:01 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2025-08-04 09:20:02 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.188s)
+2025-08-04 09:20:02 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
+2025-08-04 09:20:02 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
+2025-08-04 09:20:02 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-04 09:20:02 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-04 09:20:03 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-04 09:20:03 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-04 09:20:04 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-04 09:20:05 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-04 09:20:06 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 09:20:06 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-04 09:20:08 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-04 09:20:08 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-04 09:20:08 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 09:20:08 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 14.615 seconds (process running for 15.804)
+2025-08-04 09:20:27 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 09:20:27 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-04 09:20:27 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-08-04 09:20:27 [http-nio-8080-exec-2] INFO  c.t.c.controller.JobLevelController - [收到請求]建立JobLevel：{}  [來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 09:20:27 [http-nio-8080-exec-2] INFO  c.t.c.controller.JobLevelController - [收到請求]建立JobLevel：JobLevel(id=null, jobLevel=CEO2)  [來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 09:20:27 [http-nio-8080-exec-2] INFO  c.t.c.service.JobLevelService - [處理請求]準備儲存JobLevel：JobLevel(id=null, jobLevel=CEO2)  [來自]類別：JobLevelService，方法：createJobLevel
+2025-08-04 09:20:27 [http-nio-8080-exec-2] INFO  c.t.c.service.JobLevelService - [回傳請求]儲存成功，ID 為: 5  [來自]類別：JobLevelService，方法：createJobLevel
+2025-08-04 09:20:27 [http-nio-8080-exec-2] INFO  c.t.c.controller.JobLevelController - [回傳請求]成功建立JobLevel，ID為：5  [來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 09:27:25 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 09:27:26 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-04 09:27:26 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 09:27:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-04 09:27:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-04 09:27:35 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 16748 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
+2025-08-04 09:27:35 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-04 09:27:35 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-04 09:27:35 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-04 09:27:38 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-04 09:27:39 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 731 ms. Found 9 JPA repository interfaces.
+2025-08-04 09:27:41 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-04 09:27:41 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-04 09:27:41 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-04 09:27:41 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-04 09:27:41 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5961 ms
+2025-08-04 09:27:42 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-04 09:27:43 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47b4b0da
+2025-08-04 09:27:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-04 09:27:44 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
+2025-08-04 09:27:44 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2025-08-04 09:27:44 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.205s)
+2025-08-04 09:27:44 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
+2025-08-04 09:27:44 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
+2025-08-04 09:27:44 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-04 09:27:45 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-04 09:27:45 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-04 09:27:46 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-04 09:27:46 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-04 09:27:48 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-04 09:27:48 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 09:27:49 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-04 09:27:51 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-04 09:27:52 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-04 09:27:52 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 09:27:52 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 18.579 seconds (process running for 20.32)
+2025-08-04 09:28:12 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 09:28:12 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-04 09:28:12 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-08-04 09:28:12 [http-nio-8080-exec-3] INFO  c.t.c.controller.JobLevelController - [收到請求]建立JobLevel：JobLevel(id=null, jobLevel=CEO3)[來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 09:28:12 [http-nio-8080-exec-3] INFO  c.t.c.controller.JobLevelController - [收到請求]建立JobLevel：JobLevel(id=null, jobLevel=CEO3)  [來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 09:28:12 [http-nio-8080-exec-3] INFO  c.t.c.service.JobLevelService - [處理請求]準備儲存JobLevel：JobLevel(id=null, jobLevel=CEO3)  [來自]類別：JobLevelService，方法：createJobLevel
+2025-08-04 09:28:12 [http-nio-8080-exec-3] INFO  c.t.c.service.JobLevelService - [回傳請求]儲存成功，ID 為: 6  [來自]類別：JobLevelService，方法：createJobLevel
+2025-08-04 09:28:12 [http-nio-8080-exec-3] INFO  c.t.c.controller.JobLevelController - [回傳請求]成功建立JobLevel，ID為：6  [來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 09:29:20 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 09:29:20 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-04 09:29:20 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 09:29:20 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-04 09:29:20 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-04 09:29:27 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 17536 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
+2025-08-04 09:29:27 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-04 09:29:27 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-04 09:29:27 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-04 09:29:29 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-04 09:29:30 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 210 ms. Found 9 JPA repository interfaces.
+2025-08-04 09:29:31 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-04 09:29:31 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-04 09:29:31 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-04 09:29:31 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-04 09:29:31 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3832 ms
+2025-08-04 09:29:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-04 09:29:32 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@bf1e95d
+2025-08-04 09:29:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-04 09:29:32 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
+2025-08-04 09:29:32 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2025-08-04 09:29:33 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.183s)
+2025-08-04 09:29:33 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
+2025-08-04 09:29:33 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
+2025-08-04 09:29:33 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-04 09:29:33 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-04 09:29:33 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-04 09:29:34 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-04 09:29:34 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-04 09:29:36 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-04 09:29:36 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 09:29:37 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-04 09:29:38 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-04 09:29:39 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-04 09:29:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 09:29:39 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 13.501 seconds (process running for 14.563)
+2025-08-04 09:29:45 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 09:29:45 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-04 09:29:45 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-08-04 09:29:45 [http-nio-8080-exec-2] INFO  c.t.c.controller.JobLevelController - [收到請求]建立JobLevel：JobLevel(id=null, jobLevel=CEO4)	[來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 09:29:45 [http-nio-8080-exec-2] INFO  c.t.c.controller.JobLevelController - [收到請求]建立JobLevel：JobLevel(id=null, jobLevel=CEO4)  [來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 09:29:45 [http-nio-8080-exec-2] INFO  c.t.c.service.JobLevelService - [處理請求]準備儲存JobLevel：JobLevel(id=null, jobLevel=CEO4)  [來自]類別：JobLevelService，方法：createJobLevel
+2025-08-04 09:29:46 [http-nio-8080-exec-2] INFO  c.t.c.service.JobLevelService - [回傳請求]儲存成功，ID 為: 7  [來自]類別：JobLevelService，方法：createJobLevel
+2025-08-04 09:29:46 [http-nio-8080-exec-2] INFO  c.t.c.controller.JobLevelController - [回傳請求]成功建立JobLevel，ID為：7  [來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 09:53:34 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 09:53:35 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-04 09:53:35 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 09:53:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-04 09:53:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-04 09:53:45 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 13296 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
+2025-08-04 09:53:45 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-04 09:53:45 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-04 09:53:45 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-04 09:53:48 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-04 09:53:48 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 227 ms. Found 9 JPA repository interfaces.
+2025-08-04 09:53:50 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-04 09:53:50 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-04 09:53:50 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-04 09:53:50 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-04 09:53:50 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4656 ms
+2025-08-04 09:53:50 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-04 09:53:51 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70819928
+2025-08-04 09:53:51 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-04 09:53:51 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
+2025-08-04 09:53:51 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2025-08-04 09:53:52 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.161s)
+2025-08-04 09:53:52 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
+2025-08-04 09:53:52 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
+2025-08-04 09:53:52 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-04 09:53:52 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-04 09:53:52 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-04 09:53:53 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-04 09:53:53 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-04 09:53:55 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-04 09:53:55 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 09:53:56 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-04 09:53:58 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-04 09:53:59 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-04 09:53:59 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 09:53:59 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 15.427 seconds (process running for 16.635)
+2025-08-04 09:56:49 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 09:56:49 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-04 09:56:49 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-08-04 09:56:49 [http-nio-8080-exec-2] INFO  c.t.c.controller.JobLevelController - [收到請求]建立JobLevel：JobLevel(id=null, jobLevel=CEO5)	[來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 09:56:49 [http-nio-8080-exec-2] INFO  c.t.c.service.JobLevelService - [處理請求]準備儲存JobLevel：JobLevel(id=null, jobLevel=CEO5)  [來自]類別：JobLevelService，方法：createJobLevel
+2025-08-04 09:56:49 [http-nio-8080-exec-2] INFO  c.t.c.service.JobLevelService - [回傳請求]儲存成功，ID 為: 8  [來自]類別：JobLevelService，方法：createJobLevel
+2025-08-04 09:56:49 [http-nio-8080-exec-2] INFO  c.t.c.controller.JobLevelController - [回覆請求]建立JobLevel	[來自]類別：JobLevel(id=8, jobLevel=CEO5)，方法：JobLevelController
+2025-08-04 10:27:29 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 10:27:29 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-04 10:27:29 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 10:27:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-04 10:27:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-04 10:27:39 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 15448 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
+2025-08-04 10:27:39 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-04 10:27:39 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-04 10:27:39 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-04 10:27:42 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-04 10:27:42 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 230 ms. Found 9 JPA repository interfaces.
+2025-08-04 10:27:44 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-04 10:27:44 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-04 10:27:44 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-04 10:27:44 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-04 10:27:44 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4422 ms
+2025-08-04 10:27:44 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-04 10:27:45 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70819928
+2025-08-04 10:27:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-04 10:27:45 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
+2025-08-04 10:27:45 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2025-08-04 10:27:46 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.216s)
+2025-08-04 10:27:46 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
+2025-08-04 10:27:46 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
+2025-08-04 10:27:46 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-04 10:27:46 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-04 10:27:46 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-04 10:27:47 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-04 10:27:47 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-04 10:27:49 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-04 10:27:49 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 10:27:50 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-04 10:27:51 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-04 10:27:52 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-04 10:27:52 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 10:27:52 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 14.765 seconds (process running for 15.942)
+2025-08-04 10:28:00 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 10:28:00 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-04 10:28:00 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-08-04 10:28:00 [http-nio-8080-exec-2] INFO  c.t.c.controller.JobLevelController - [收到請求]建立JobLevel：JobLevel(id=null, jobLevel=stagg)	[來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 10:28:00 [http-nio-8080-exec-2] INFO  c.t.c.service.JobLevelService - [收到請求]建立JobLevel：JobLevel(id=null, jobLevel=stagg)	[來自]類別：JobLevelService，方法：createJobLevel
+2025-08-04 10:28:00 [http-nio-8080-exec-2] INFO  c.t.c.service.JobLevelService - [回覆請求]建立JobLevel：JobLevel(id=9, jobLevel=stagg)	[來自]類別：JobLevelService，方法：createJobLevel
+2025-08-04 10:28:00 [http-nio-8080-exec-2] INFO  c.t.c.controller.JobLevelController - [回覆請求]建立JobLevel：JobLevel(id=9, jobLevel=stagg)	[來自]類別：JobLevelController，方法：createJobLevel
+2025-08-04 10:28:18 [http-nio-8080-exec-3] INFO  c.t.c.controller.JobLevelController - [收到請求]尋找JobLevel_ID：9	[來自]類別：JobLevelController，方法：findJobLevelById
+2025-08-04 10:28:18 [http-nio-8080-exec-3] INFO  c.t.c.service.JobLevelService - [收到請求]尋找JobLevel_ID：9	[來自]類別：JobLevelService，方法：findJobLevelById
+2025-08-04 10:28:18 [http-nio-8080-exec-3] INFO  c.t.c.service.JobLevelService - [回覆請求]尋找JobLevel_ID：9	[來自]類別：JobLevelService，方法：findJobLevelById
+2025-08-04 10:28:18 [http-nio-8080-exec-3] INFO  c.t.c.controller.JobLevelController - [回覆請求]尋找JobLevel_ID：9	[來自]類別：JobLevelController，方法：findJobLevelById
+2025-08-04 10:28:38 [http-nio-8080-exec-4] INFO  c.t.c.controller.JobLevelController - [收到請求]尋找所有JobLevel	[來自]類別：JobLevelController，方法：findAllJobLevels
+2025-08-04 10:28:38 [http-nio-8080-exec-4] INFO  c.t.c.service.JobLevelService - [收到請求]尋找所有JobLevel	[來自]類別：JobLevelService，方法：findAllJobLevels
+2025-08-04 10:28:38 [http-nio-8080-exec-4] INFO  c.t.c.service.JobLevelService - [回覆請求]尋找所有JobLevel	[來自]類別：JobLevelService，方法：findAllJobLevels
+2025-08-04 10:28:38 [http-nio-8080-exec-4] INFO  c.t.c.controller.JobLevelController - [回覆請求]尋找所有JobLevel	[來自]類別：JobLevelController，方法：findAllJobLevels
+2025-08-04 10:28:38 [http-nio-8080-exec-4] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-08-04 10:29:06 [http-nio-8080-exec-5] INFO  c.t.c.controller.JobLevelController - [收到請求]更新JobLevel_ID：9	[來自]類別：JobLevelController，方法：updateJobLevelById
+2025-08-04 10:29:06 [http-nio-8080-exec-5] INFO  c.t.c.service.JobLevelService - [收到請求]更新JobLevel_ID：9	[來自]類別：JobLevelService，方法：updateJobLevelById
+2025-08-04 10:29:06 [http-nio-8080-exec-5] INFO  c.t.c.service.JobLevelService - [回覆請求]更新JobLevel_ID：9	[來自]類別：JobLevelService，方法：updateJobLevelById
+2025-08-04 10:29:06 [http-nio-8080-exec-5] INFO  c.t.c.controller.JobLevelController - [回覆請求]更新JobLevel_ID：9	[來自]類別：JobLevelController，方法：updateJobLevelById
+2025-08-04 11:08:48 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 11:08:49 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-04 11:08:49 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 11:08:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-04 11:08:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-04 11:09:06 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 4544 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
+2025-08-04 11:09:06 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-04 11:09:06 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-04 11:09:06 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-04 11:09:09 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-04 11:09:09 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 410 ms. Found 9 JPA repository interfaces.
+2025-08-04 11:09:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-04 11:09:11 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-04 11:09:11 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-04 11:09:12 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-04 11:09:12 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5081 ms
+2025-08-04 11:09:12 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-04 11:09:13 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@9ac1f9f
+2025-08-04 11:09:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-04 11:09:13 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
+2025-08-04 11:09:14 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2025-08-04 11:09:14 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.174s)
+2025-08-04 11:09:14 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
+2025-08-04 11:09:14 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
+2025-08-04 11:09:14 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-04 11:09:15 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-04 11:09:15 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-04 11:09:16 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-04 11:09:16 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-04 11:09:18 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-04 11:09:18 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 11:09:19 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-04 11:09:21 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-04 11:09:22 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-04 11:09:22 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 11:09:22 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 17.469 seconds (process running for 18.973)
+2025-08-04 14:14:10 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 14:14:10 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-04 14:14:10 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 71 ms
+2025-08-04 14:15:40 [http-nio-8080-exec-8] INFO  c.t.c.controller.UserController - [收到請求]尋找所有User	[來自]類別：UserController，方法：findAllUsers
+2025-08-04 14:15:40 [http-nio-8080-exec-8] INFO  c.t.c.service.UserService - [收到請求]尋找所有User	[來自]類別：UserService，方法：findAllUsers
+2025-08-04 14:15:40 [http-nio-8080-exec-8] INFO  c.t.c.service.UserService - [回覆請求]尋找所有User	[來自]類別：UserService，方法：findAllUsers
+2025-08-04 14:15:40 [http-nio-8080-exec-8] INFO  c.t.c.controller.UserController - [回覆請求]尋找所有User	[來自]類別：UserController，方法：findAllUsers
+2025-08-04 14:15:40 [http-nio-8080-exec-8] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-08-04 14:27:47 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 14:27:47 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-04 14:27:47 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 14:27:48 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-04 14:27:48 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
