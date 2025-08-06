@@ -16,6 +16,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/customer")
 @Slf4j
@@ -23,9 +25,9 @@ import org.springframework.web.bind.annotation.*;
 public class CustomerController {
     private final CustomerService customerService;
     @PostMapping("/create")
-    public ResponseEntity<Customer>createCustomer(@Valid@RequestBody Customer customer){
+    public ResponseEntity<List<Customer>>createCustomer(@Valid@RequestBody List<Customer> customer){
         LogUtils.logRequest(log,this,"建立Customer：{}",customer);
-        Customer createdCustomer=customerService.createCustomer(customer);
+        List<Customer> createdCustomer=customerService.createCustomer(customer);
         LogUtils.logResponse(log,this,"建立Customer：{}",customer);
         return ResponseEntity.ok(createdCustomer);
     }

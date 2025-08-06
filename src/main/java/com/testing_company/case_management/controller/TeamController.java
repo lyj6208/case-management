@@ -16,6 +16,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/team")
 @Slf4j
@@ -23,9 +25,9 @@ import org.springframework.web.bind.annotation.*;
 public class TeamController {
     private final TeamService teamService;
     @PostMapping("/create")
-    public ResponseEntity<Team> createTeam(@Valid @RequestBody Team team){
+    public ResponseEntity<List<Team>> createTeam(@Valid @RequestBody List<Team> team){
         LogUtils.logRequest(log,this,"建立Team：{}"+team);
-        Team createdResult=teamService.createTeam(team);
+        List<Team> createdResult=teamService.createTeam(team);
         LogUtils.logResponse(log,this,"建立Team：{}"+team);
         return ResponseEntity.status(HttpStatus.CREATED).header("X-message","Successfully create Team").body(createdResult);
     }

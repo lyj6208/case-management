@@ -16,6 +16,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/testItem")
 @Slf4j
@@ -23,9 +25,9 @@ import org.springframework.web.bind.annotation.*;
 public class TestItemController {
     private final TestItemService testItemService;
     @PostMapping("/create")
-    public ResponseEntity<TestItem> createTestItem(@Valid @RequestBody TestItem testItem){
+    public ResponseEntity<List<TestItem>> createTestItem(@Valid @RequestBody List<TestItem> testItem){
         LogUtils.logRequest(log,this,"建立TestItem：{}"+testItem);
-        TestItem createdTestItem=testItemService.createTestItem(testItem);
+        List<TestItem> createdTestItem=testItemService.createTestItem(testItem);
         LogUtils.logResponse(log,this,"建立TestItem：{}"+testItem);
         return ResponseEntity.ok(createdTestItem);
     }

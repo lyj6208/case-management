@@ -28,9 +28,9 @@ public class JobLevelController {
     private final JobLevelService jobLevelService;
 
     @PostMapping("/create")
-    public ResponseEntity<JobLevel> createJobLevel(@Valid @RequestBody JobLevel jobLevel){
+    public ResponseEntity<List<JobLevel>> createJobLevel(@Valid @RequestBody List<JobLevel> jobLevel){
         LogUtils.logRequest(log,this,"建立JobLevel：{}",jobLevel);
-        JobLevel createdResult=jobLevelService.createJobLevel(jobLevel);
+        List<JobLevel> createdResult=jobLevelService.createJobLevel(jobLevel);
         LogUtils.logResponse(log,this, "建立JobLevel：{}",jobLevel);
         return ResponseEntity.status(HttpStatus.CREATED).header("X-message","Successfully create JobLevel").body(createdResult);
     }

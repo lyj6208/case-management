@@ -18,3 +18,7 @@ logging:
     root: INFO
   file:
     name: logs/application.log
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION}

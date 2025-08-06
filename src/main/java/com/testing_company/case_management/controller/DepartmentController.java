@@ -14,6 +14,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("/api/department")
@@ -22,9 +24,9 @@ public class DepartmentController {
     public final DepartmentService departmentService;
 
     @PostMapping("/create")
-    public ResponseEntity<Department>createDepartment(@Valid @RequestBody Department department){
+    public ResponseEntity<List<Department>>createDepartment(@Valid @RequestBody List<Department> department){
         LogUtils.logRequest(log,this,"建立Department"+department);
-        Department createdDepartment=departmentService.createDepartment(department);
+        List<Department> createdDepartment=departmentService.createDepartment(department);
         LogUtils.logResponse(log,this,"建立Department"+department);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdDepartment);
     }

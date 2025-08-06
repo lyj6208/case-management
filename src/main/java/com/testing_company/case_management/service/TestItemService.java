@@ -15,6 +15,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @Slf4j
 @AllArgsConstructor
@@ -24,9 +26,9 @@ public class TestItemService {
     private final DepartmentRepository departmentRepository;
     private final UserRepository userRepository;
 
-    public TestItem createTestItem(TestItem testItem){
+    public List<TestItem> createTestItem(List<TestItem> testItem){
         LogUtils.logRequest(log,this,"建立TestItem：{}"+testItem);
-        TestItem createdTestItem=testItemRepository.save(testItem);
+        List<TestItem> createdTestItem=testItemRepository.saveAll(testItem);
         LogUtils.logResponse(log,this,"建立TestItem：{}"+testItem);
         return createdTestItem;
     }
@@ -54,6 +56,9 @@ public class TestItemService {
         Team team= BeanUtil.findIfIdPresent(testItem.getTeamId(),teamRepository::findById);
         Department department = BeanUtil.findIfIdPresent(team.getDepartmentId(),departmentRepository::findById);
         User modifier=BeanUtil.findIfIdPresent(testItem.getLastModifiedById(),userRepository::findById);
+        User experimentOperator=BeanUtil.findIfIdPresent(testItem.getExperimentOperatorId(),userRepository::findById);
+        User experimentReviewer=BeanUtil.findIfIdPresent(testItem.getExperimentReviewerId(),userRepository::findById);
+        User reportConductor=BeanUtil.findIfIdPresent(testItem.getReportConductorId(),userRepository::findById);
         return TestItemResponseDTO.builder()
                 .id(testItem.getId())
                 .name(testItem.getName())
@@ -62,6 +67,9 @@ public class TestItemService {
                 .testingDays(testItem.getTestingDays())
                 .testingPrice(testItem.getTestingPrice())
                 .createdTime(testItem.getCreatedTime())
+                .experimentOperator(experimentOperator!=null? experimentOperator.getEmployeeNumber()+"_"+experimentOperator.getName() :null)
+                .experimentReviewer(experimentReviewer!=null? experimentReviewer.getEmployeeNumber()+"_"+experimentReviewer.getName() :null)
+                .reportConductor(reportConductor!=null? reportConductor.getEmployeeNumber()+"_"+reportConductor.getName() :null)
                 .lastModifiedTime(testItem.getLastModifiedTime())
                 .lastModifiedBy(modifier!=null? modifier.getEmployeeNumber()+"_"+modifier.getName() : null)
                 .build();

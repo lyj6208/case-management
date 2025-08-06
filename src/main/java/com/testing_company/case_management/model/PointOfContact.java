@@ -16,7 +16,7 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class PointOfContact {
+public class PointOfContact extends TimeBaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
@@ -34,10 +34,5 @@ public class PointOfContact {
     private String contactEmail;
     @Column(name="contact_address")
     private String contactAddress;
-    @Column(name="created_time")
-    private Timestamp createdTime;
-    @Column(name="last_modified_time")
-    private Timestamp lastModifiedTime;
-    @Column(name="last_modified_by_id")
     private Long lastModifiedById;
 }

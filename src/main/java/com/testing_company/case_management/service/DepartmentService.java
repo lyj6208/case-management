@@ -11,6 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -19,9 +20,9 @@ import java.util.Optional;
 public class DepartmentService {
     public final DepartmentRepository departmentRepository;
 
-    public Department createDepartment(Department department){
+    public List<Department> createDepartment(List<Department> department){
         LogUtils.logRequest(log,this,"建立Department"+department);
-        Department createdDepartment=departmentRepository.save(department);
+        List<Department> createdDepartment=departmentRepository.saveAll(department);
         LogUtils.logResponse(log,this,"建立Department"+department);
         return createdDepartment;
     }

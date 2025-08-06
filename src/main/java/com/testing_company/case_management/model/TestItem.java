@@ -31,5 +31,11 @@ public class TestItem extends TimeBaseEntity{
     private BigDecimal testingPrice;
     @Column(name="last_modified_by_id")
     private Long lastModifiedById;
+    @Column(name="experiment_operator_id")
+    private Long experimentOperatorId;
+    @Column(name="experiment_reviewer_id")
+    private Long experimentReviewerId;
+    @Column(name="report_conductor_id")
+    private Long reportConductorId;
 
 }

@@ -2,7 +2,6 @@ package com.testing_company.case_management.model;
 
 import com.testing_company.case_management.enums.CaseStatus;
 import com.testing_company.case_management.enums.SampleStatus;
-import com.testing_company.case_management.enums.SystemRole;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -59,8 +58,8 @@ public class TestCase extends TimeBaseEntity{
     @Column(name="report_deadline")
     private Timestamp reportDeadline;
 
-    @Column(name="experiment_conductor_id")
-    private Long experimentConductorId;
+    @Column(name="experiment_operator_id")
+    private Long experimentOperatorId;
     @Column(name="experiment_reviewer_id")
     private Long experimentReviewerId;
     @Column(name="report_conductor_id")

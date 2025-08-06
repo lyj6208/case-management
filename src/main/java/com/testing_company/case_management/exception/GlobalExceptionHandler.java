@@ -98,6 +98,8 @@ public class GlobalExceptionHandler {
             userMessage="關聯資料錯誤，請確認相關欄位是否正確存在";
         }else if(message.contains("cannot be null")){
             userMessage="有必要欄位為空，請確認資料完整性";
+        }else if(message.contains("客製化訊息")){
+            userMessage= ex.getMessage().substring(7);
         }else {
             userMessage="資料儲存失敗，請確認輸入內容";
         }
@@ -120,5 +122,16 @@ public class GlobalExceptionHandler {
                 HttpStatus.BAD_REQUEST.getReasonPhrase().toString());
         log.warn("資料格式錯誤：{}",ex.getMessage());
         return new ResponseEntity<>(myErrorResponse, HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler(DuplicateException.class)
+    public ResponseEntity<?>handleDuplicateException(DuplicateException ex, HttpServletRequest request){
+        MyErrorResponse myErrorResponse=new MyErrorResponse(
+                HttpStatus.CONFLICT,
+                ex.getMessage(),
+                request.getRequestURI(),
+                HttpStatus.CONFLICT.getReasonPhrase()
+        );
+        log.warn("資料重複：{}",ex.getMessage());
+        return new ResponseEntity<>(myErrorResponse, HttpStatus.CONFLICT);
     }
 }

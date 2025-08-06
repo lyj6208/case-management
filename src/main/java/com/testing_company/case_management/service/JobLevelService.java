@@ -11,6 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Slf4j
@@ -19,9 +20,9 @@ import java.util.Optional;
 public class JobLevelService {
     private final JobLevelRepository jobLevelRepository;
 
-    public JobLevel createJobLevel(JobLevel jobLevel){
+    public List<JobLevel> createJobLevel(List<JobLevel> jobLevel){
         LogUtils.logRequest(log,this,"建立JobLevel：{}",jobLevel);
-        JobLevel createdJobLevel=jobLevelRepository.save(jobLevel);
+        List<JobLevel> createdJobLevel=jobLevelRepository.saveAll(jobLevel);
         LogUtils.logResponse(log,this, "建立JobLevel：{}",jobLevel);
         return createdJobLevel;
     }

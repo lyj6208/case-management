@@ -1,8 +1,7 @@
 package com.testing_company.case_management.controller;
 
+import com.testing_company.case_management.dto.FindTestCaseByCustomRequestDTO;
 import com.testing_company.case_management.dto.TestCaseResponseDTO;
-import com.testing_company.case_management.enums.CaseStatus;
-import com.testing_company.case_management.exception.NotFoundException;
 import com.testing_company.case_management.model.TestCase;
 import com.testing_company.case_management.service.TestCaseService;
 import com.testing_company.case_management.util.LogUtils;
@@ -17,9 +16,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Timestamp;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.List;
 
 @RestController
 @RequestMapping("api/testCase")
@@ -34,12 +32,26 @@ public class TestCaseController {
         LogUtils.logResponse(log,this,"建立TestCase：{}"+testCase);
         return ResponseEntity.ok(createdTestCase);
     }
+    @PostMapping("/createTestCases")
+    public ResponseEntity<List<TestCase>> createTestCases(@Valid @RequestBody List<TestCase> testCase){
+        LogUtils.logRequest(log,this,"建立TestCase：{}"+testCase);
+        List<TestCase> createdTestCase=testCaseService.createTestCases(testCase);
+        LogUtils.logResponse(log,this,"建立TestCase：{}"+testCase);
+        return ResponseEntity.ok(createdTestCase);
+    }
     @GetMapping("/findById/{testCaseId}")
     public ResponseEntity<TestCaseResponseDTO>findTestCaseById(@PathVariable Long testCaseId){
         LogUtils.logRequest(log,this,"尋找TestCase_ID：{}"+testCaseId);
         TestCaseResponseDTO foundTestCase=testCaseService.findTestCaseById(testCaseId);
         LogUtils.logResponse(log,this,"尋找TestCase_ID：{}"+testCaseId);
         return ResponseEntity.ok(foundTestCase);
+    }
+    @GetMapping("/findByCustom2")
+    public ResponseEntity<List<TestCaseResponseDTO>> findByCustom2(@RequestBody FindTestCaseByCustomRequestDTO testCaseByCustomRequestDTO){
+        LogUtils.logRequest(log, this,"找尋特定條件TestCase：{}",testCaseByCustomRequestDTO);
+        List<TestCaseResponseDTO> testCaseResponseDTOS=testCaseService.findByCustom2(testCaseByCustomRequestDTO);
+        LogUtils.logResponse(log, this,"找尋特定條件TestCase：{}",testCaseResponseDTOS);
+        return ResponseEntity.ok(testCaseResponseDTOS);
     }
     @GetMapping("/findByCustom")
     public ResponseEntity<Page<TestCaseResponseDTO>> findTestCasesByCustom(
@@ -73,12 +85,12 @@ public class TestCaseController {
         LogUtils.logResponse(log,this,"啟動TestCase_ID：{}"+testCaseId);
         return ResponseEntity.ok(startedTestCase);
     }
-    @PostMapping("/assign/{testCaseId}/{userId}")
-    public ResponseEntity<TestCaseResponseDTO> assignTestCaseInLab(@PathVariable Long testCaseId, @PathVariable Long userId){
-        LogUtils.logRequest(log,this,"指派TestCase_ID：{}"+testCaseId);
-        TestCaseResponseDTO assignedTestCase=testCaseService.assignTestCase(testCaseId, userId);
-        LogUtils.logResponse(log,this,"指派TestCase_ID：{}"+testCaseId);
-        return ResponseEntity.ok(assignedTestCase);
+    @PostMapping("/changeTestCaseOperator/{testCaseId}/{userId}")
+    public ResponseEntity<TestCaseResponseDTO> changeTestCaseOperator(@PathVariable Long testCaseId, @PathVariable Long userId){
+        LogUtils.logRequest(log,this,"變更實驗執行者TestCase_ID：{}"+testCaseId);
+        TestCaseResponseDTO testCase=testCaseService.changeTestCaseOperator(testCaseId, userId);
+        LogUtils.logResponse(log,this,"變更實驗執行者TestCase_ID：{}"+testCaseId);
+        return ResponseEntity.ok(testCase);
     }
     @PostMapping("/collectSample/{testCaseId}")
     public ResponseEntity<TestCaseResponseDTO> collectSample(@PathVariable Long testCaseId){

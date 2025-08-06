@@ -35,7 +35,7 @@ public class TestCaseResponseDTO {
 
     private Timestamp labDeadline;
     private Timestamp reportDeadline;
-    private String experimentConductor;
+    private String experimentOperator;
     private String experimentReviewer;
     private String reportConductor;
     private String testResult;

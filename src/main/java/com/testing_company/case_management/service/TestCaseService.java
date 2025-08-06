@@ -1,5 +1,6 @@
 package com.testing_company.case_management.service;
 
+import com.testing_company.case_management.dto.FindTestCaseByCustomRequestDTO;
 import com.testing_company.case_management.dto.TestCaseResponseDTO;
 import com.testing_company.case_management.enums.CaseStatus;
 import com.testing_company.case_management.enums.SampleStatus;
@@ -12,12 +13,15 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -34,6 +38,7 @@ public class TestCaseService {
 
     public TestCase createTestCase(TestCase testCase){
         LogUtils.logRequest(log,this,"建立TestCase：{}"+testCase);
+        //處理testCaseNumber
         Long nextNumber= Optional.ofNullable(testCaseRepository.findMaxCaseNumber()).orElse(0L)+1;
         String formattedNumber=String.format("%07d",nextNumber);
 
@@ -42,20 +47,76 @@ public class TestCaseService {
         Department department=BeanUtil.findIfIdPresent(team.getDepartmentId(),departmentRepository::findById);
         testCase.setTestCaseNumber(department.getAbbreviation()+formattedNumber);
 
+        //處理testingdays&testingprice
         if(testCase.getTestingDays()==null){testCase.setTestingDays(testItem.getTestingDays());};
         if(testCase.getTestingPrice()==null){testCase.setTestingPrice(testItem.getTestingPrice());};
+
+        //處理各關卡負責人
+        testCase.setExperimentOperatorId(testItem.getExperimentOperatorId());
+        testCase.setExperimentReviewerId(testItem.getExperimentReviewerId());
+        testCase.setReportConductorId(testItem.getReportConductorId());
+
         testCase.setCaseStatus(CaseStatus.CASE_CREATED);
         testCase.setSampleStatus(SampleStatus.AWAITING_DELIVERY);
 
+        //TODO: caseHandlerID待Security建立後處理
         TestCase createdTestCase=testCaseRepository.save(testCase);
         LogUtils.logResponse(log,this,"建立TestCase：{}"+testCase);
         return createdTestCase;
+    }
+    public List<TestCase> createTestCases(List<TestCase> testCase){
+        LogUtils.logRequest(log,this,"建立TestCase：{}"+testCase);
+        List<TestCase>testCasesToSave=new ArrayList<>();
+        for(TestCase t:testCase){
+        //處理testCaseNumber
+        Long nextNumber= Optional.ofNullable(testCaseRepository.findMaxCaseNumber()).orElse(0L)+1;
+        String formattedNumber=String.format("%07d",nextNumber);
+
+        TestItem testItem= BeanUtil.findIfIdPresent(t.getTestItemId(),testItemRepository::findById);
+        Team team=BeanUtil.findIfIdPresent(testItem.getTeamId(),teamRepository::findById);
+        Department department=BeanUtil.findIfIdPresent(team.getDepartmentId(),departmentRepository::findById);
+        t.setTestCaseNumber(department.getAbbreviation()+formattedNumber);
+
+        //處理testingdays&testingprice
+        if(t.getTestingDays()==null){t.setTestingDays(testItem.getTestingDays());};
+        if(t.getTestingPrice()==null){t.setTestingPrice(testItem.getTestingPrice());};
+
+        //處理各關卡負責人
+        t.setExperimentOperatorId(testItem.getExperimentOperatorId());
+        t.setExperimentReviewerId(testItem.getExperimentReviewerId());
+        t.setReportConductorId(testItem.getReportConductorId());
+
+        t.setCaseStatus(CaseStatus.CASE_CREATED);
+        t.setSampleStatus(SampleStatus.AWAITING_DELIVERY);
+
+        //TODO: caseHandlerID、lastModifiedByID待Security建立後處理
+        TestCase createdTestCase=testCaseRepository.save(t);
+        testCasesToSave.add(createdTestCase);}
+        LogUtils.logResponse(log,this,"建立TestCase：{}"+testCase);
+        return testCasesToSave;
     }
     public TestCaseResponseDTO findTestCaseById(Long testCaseId){
         LogUtils.logRequest(log,this,"尋找TestCase_ID：{}"+testCaseId);
         TestCase foundTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
         LogUtils.logResponse(log,this,"尋找TestCase_ID：{}"+testCaseId);
         return convertToDTO(foundTestCase);
+    }
+    public List<TestCaseResponseDTO> findByCustom2(FindTestCaseByCustomRequestDTO findTestCaseByCustomRequestDTO){
+        LogUtils.logRequest(log, this,"找尋特定條件TestCase：{}",findTestCaseByCustomRequestDTO);
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername=authentication.getName();
+        User user=userRepository.findByUsername(currentUsername).orElseThrow(null);
+
+        FindTestCaseByCustomRequestDTO saveDTO=new FindTestCaseByCustomRequestDTO();
+        BeanUtil.copyNotNullProperties(findTestCaseByCustomRequestDTO, saveDTO);
+        if(saveDTO.getCaseStatus().isEmpty()){saveDTO.setCaseStatus(null);}
+        List<TestCase> testCases=testCaseRepository.findByCustom2(
+                saveDTO.getCaseStartDateTime(),
+                saveDTO.getCaseEndDateTime(),
+                saveDTO.getCaseStatus(),
+                saveDTO.getTeamId());
+        LogUtils.logResponse(log, this,"找尋特定條件TestCase：{}",findTestCaseByCustomRequestDTO);
+        return testCases.stream().map(this::convertToDTO).toList();
     }
     public Page<TestCaseResponseDTO> findTestCasesByCustom(Pageable pageable, LocalDate caseStartDate_Begin, LocalDate caseStartDate_End){
         LogUtils.logRequest(log,this,"尋找特定條件之TestCase");
@@ -64,6 +125,7 @@ public class TestCaseService {
                 ?Timestamp.valueOf(caseStartDate_Begin.atStartOfDay()):Timestamp.valueOf(today.atStartOfDay());
         Timestamp end=caseStartDate_End!=null
                 ?Timestamp.valueOf(caseStartDate_End.plusDays(1).atStartOfDay()):Timestamp.valueOf(today.plusDays(1).atStartOfDay());
+
 
 
         Page<TestCase>foundTestCases=testCaseRepository.findByCaseStartTimeBetween(begin, end, pageable);
@@ -81,25 +143,28 @@ public class TestCaseService {
     public TestCaseResponseDTO startTestCase(Long testCaseId, Double sampleOriginWeight){
         LogUtils.logRequest(log,this,"啟動TestCase_ID：{}"+testCaseId);
         TestCase testCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        TestItem testItem=testItemRepository.findById(testCase.getTestItemId()).orElseThrow(null);
+        User experimentOperator=userRepository.findById(testItem.getExperimentOperatorId()).orElseThrow(null);
         testCase.setCaseStartTime(Timestamp.valueOf(LocalDateTime.now()));
         testCase.setLabDeadline(Timestamp.valueOf(LocalDateTime.now().plusDays(testCase.getTestingDays()-2)));
         testCase.setReportDeadline(Timestamp.valueOf(LocalDateTime.now().plusDays(testCase.getTestingDays())));
         testCase.setCaseStatus(CaseStatus.IN_PROGRESS);
         testCase.setSampleStatus(SampleStatus.PENDING_TESTING_AREA);
         testCase.setSampleOriginalWeight(sampleOriginWeight);
+        testCase.setExperimentOperatorId(experimentOperator.getId());
         testCaseRepository.save(testCase);
         LogUtils.logResponse(log,this,"啟動TestCase_ID：{}"+testCaseId);
         return convertToDTO(testCase);
 
     }
-    public TestCaseResponseDTO assignTestCase(Long testCaseId, Long userId){
-        LogUtils.logRequest(log,this,"指派TestCase_ID：{}"+testCaseId);
-        TestCase assignedTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+    public TestCaseResponseDTO changeTestCaseOperator(Long testCaseId, Long userId){
+        LogUtils.logRequest(log,this,"變更實驗執行者TestCase_ID：{}"+testCaseId);
+        TestCase changeTestCaseOperator=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
         User assingedUser=userRepository.findById(userId).orElseThrow(()->new NotFoundException("找不到ID為"+userId+"之User"));
-        assignedTestCase.setExperimentConductorId(assingedUser.getId());
-        testCaseRepository.save(assignedTestCase);
-        LogUtils.logResponse(log,this,"指派TestCase_ID：{}"+testCaseId);
-        return convertToDTO(assignedTestCase);
+        changeTestCaseOperator.setExperimentOperatorId(assingedUser.getId());
+        testCaseRepository.save(changeTestCaseOperator);
+        LogUtils.logResponse(log,this,"變更實驗執行者TestCase_ID：{}"+testCaseId);
+        return convertToDTO(changeTestCaseOperator);
     }
     public TestCaseResponseDTO collectSample(Long testCaseId){
         LogUtils.logRequest(log,this,"取出樣品TestCase_ID：{}"+testCaseId);
@@ -160,7 +225,7 @@ public class TestCaseService {
         Customer customer= BeanUtil.findIfIdPresent(testCase.getCustomerId(),customerRepository::findById);
         PointOfContact pointOfContact=BeanUtil.findIfIdPresent(testCase.getPointOfContactId(),pointOfContactRepository::findById);
         TestItem testItem=BeanUtil.findIfIdPresent(testCase.getTestItemId(),testItemRepository::findById);
-        User experimentConductor=BeanUtil.findIfIdPresent(testCase.getExperimentConductorId(),userRepository::findById);
+        User experimentOperator=BeanUtil.findIfIdPresent(testCase.getExperimentOperatorId(),userRepository::findById);
         User experimentReviewer=BeanUtil.findIfIdPresent(testCase.getExperimentReviewerId(),userRepository::findById);
         User reportConductor=BeanUtil.findIfIdPresent(testCase.getReportConductorId(),userRepository::findById);
         User caseHandler=BeanUtil.findIfIdPresent(testCase.getCaseHandlerId(),userRepository::findById);
@@ -188,7 +253,7 @@ public class TestCaseService {
                 .reportCloseTime(testCase.getReportCloseTime())
                 .labDeadline(testCase.getLabDeadline())
                 .reportDeadline(testCase.getReportDeadline())
-                .experimentConductor(experimentConductor!=null? experimentConductor.getEmployeeNumber()+"_"+experimentConductor.getName() :null)
+                .experimentOperator(experimentOperator!=null? experimentOperator.getEmployeeNumber()+"_"+experimentOperator.getName() :null)
                 .experimentReviewer(experimentReviewer!=null?experimentReviewer.getEmployeeNumber()+"_"+experimentReviewer.getName():null)
                 .reportConductor(reportConductor!=null?reportConductor.getEmployeeNumber()+"_"+reportConductor.getName():null)
                 .testResult(testCase.getTestResult())

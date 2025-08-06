@@ -1,5 +1,6 @@
 package com.testing_company.case_management.controller;
 
+import com.testing_company.case_management.dto.RegisterRequestDTO;
 import com.testing_company.case_management.dto.TeamResponseDTO;
 import com.testing_company.case_management.dto.UserResponseDTO;
 import com.testing_company.case_management.model.User;
@@ -18,6 +19,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/user")
 @Slf4j
@@ -26,10 +29,17 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     private final UserService userService;
     @PostMapping("/create")
-    public ResponseEntity<User> createUser(@Valid @RequestBody User user){
-        LogUtils.logRequest(log,this,"建立User：{}",user);
-        User createdUser=userService.createUser(user);
-        LogUtils.logResponse(log,this,"建立User：{}",user);
+    public ResponseEntity<User> createUser(@Valid @RequestBody RegisterRequestDTO registerRequestDTO){
+        LogUtils.logRequest(log,this,"建立User：{}",registerRequestDTO);
+        User createdUser=userService.createUser(registerRequestDTO);
+        LogUtils.logResponse(log,this,"建立User：{}",registerRequestDTO);
+        return ResponseEntity.ok(createdUser);
+    }
+    @PostMapping("/createBatch")
+    public ResponseEntity<List<User>> createUsers(@Valid @RequestBody List<RegisterRequestDTO> registerRequestDTO){
+        LogUtils.logRequest(log,this,"建立User：{}",registerRequestDTO);
+        List<User> createdUser=userService.createUsers(registerRequestDTO);
+        LogUtils.logResponse(log,this,"建立User：{}",registerRequestDTO);
         return ResponseEntity.ok(createdUser);
     }
     @GetMapping("/findById/{userId}")

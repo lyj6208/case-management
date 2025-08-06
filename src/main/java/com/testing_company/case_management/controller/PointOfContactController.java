@@ -16,6 +16,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/pointOfContact")
 @Slf4j
@@ -23,9 +25,9 @@ import org.springframework.web.bind.annotation.*;
 public class PointOfContactController {
     private final PointOfContactService pointOfContactService;
     @PostMapping("/create")
-    public ResponseEntity<PointOfContact>createPointOfContact(@Valid@RequestBody PointOfContact pointOfContact){
+    public ResponseEntity<List<PointOfContact>>createPointOfContact(@Valid@RequestBody List<PointOfContact> pointOfContact){
         LogUtils.logRequest(log,this,"建立PointOfContact：{}"+pointOfContact);
-        PointOfContact createdPointOfContact=pointOfContactService.createPointOfContact(pointOfContact);
+        List<PointOfContact> createdPointOfContact=pointOfContactService.createPointOfContact(pointOfContact);
         LogUtils.logResponse(log,this,"建立PointOfContact：{}"+pointOfContact);
         return ResponseEntity.ok(createdPointOfContact);
     }

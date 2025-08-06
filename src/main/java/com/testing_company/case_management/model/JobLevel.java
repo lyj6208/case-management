@@ -20,8 +20,4 @@ public class JobLevel {
     @NotBlank(message = "jobLevel不可為空")
     @Column(name="job_level")
     private String jobLevel;
-//    @NotBlank(message = "jobLevel2不可為空")
-//    @Column(name="job_level2")
-//    private String jobLevel2;
-
 }

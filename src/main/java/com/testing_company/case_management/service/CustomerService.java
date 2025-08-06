@@ -16,6 +16,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @Slf4j
 @AllArgsConstructor
@@ -24,9 +26,9 @@ public class CustomerService {
     private final IndustryCategoryRepository industryCategoryRepository;
     private final UserRepository userRepository;
 
-    public Customer createCustomer(Customer customer){
+    public List<Customer> createCustomer(List<Customer> customer){
         LogUtils.logRequest(log,this,"建立Customer：{}",customer);
-        Customer createdCustomer=customerRepository.save(customer);
+        List<Customer> createdCustomer=customerRepository.saveAll(customer);
         LogUtils.logResponse(log,this,"建立Customer：{}",customer);
         return createdCustomer;
     }

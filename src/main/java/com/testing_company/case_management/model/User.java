@@ -1,7 +1,7 @@
 package com.testing_company.case_management.model;
 
 import com.testing_company.case_management.enums.Sex;
-import com.testing_company.case_management.enums.SystemRole;
+import com.testing_company.case_management.enums.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -10,8 +10,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Date;
-import java.sql.Timestamp;
 import java.time.LocalDate;
 
 @Data
@@ -24,6 +22,11 @@ public class User extends TimeBaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "username", nullable = false, unique = true)
+    private String username;
+    @Column(name = "password", nullable = false)
+    private String password;
 
     @NotBlank(message = "name不可為空")
     @Column(name = "name")
@@ -60,10 +63,10 @@ public class User extends TimeBaseEntity{
     @Column(name = "team_id")
     private Long teamId;
 
-    @NotNull(message = "systemRole不可為空")
+    @NotNull(message = "role不可為空")
     @Enumerated(EnumType.STRING)
-    @Column(name = "system_role")
-    private SystemRole systemRole;
+    @Column(name = "role")
+    private Role role;
 
     @Column(name = "hired_at")
     private LocalDate hiredAt;

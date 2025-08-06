@@ -15,15 +15,17 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @Slf4j
 @AllArgsConstructor
 public class TeamService {
     private final TeamRepository teamRepository;
     private final DepartmentRepository departmentRepository;
-    public Team createTeam(Team team){
+    public List<Team> createTeam(List<Team> team){
         LogUtils.logRequest(log,this,"建立Team：{}"+team);
-        Team createdTeam=teamRepository.save(team);
+        List<Team> createdTeam=teamRepository.saveAll(team);
         LogUtils.logResponse(log,this,"建立Team：{}"+team);
         return createdTeam;
     }

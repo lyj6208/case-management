@@ -19,4 +19,7 @@ public class TestItemResponseDTO {
     private Timestamp createdTime;
     private Timestamp lastModifiedTime;
     private String lastModifiedBy;
+    private String experimentOperator;
+    private String experimentReviewer;
+    private String reportConductor;
 }

@@ -16,6 +16,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 
 
 @Service
@@ -25,9 +26,9 @@ public class PointOfContactService {
     private final PointOfContactRepository pointOfContactRepository;
     private final CustomerRepository customerRepository;
     private final UserRepository userRepository;
-    public PointOfContact createPointOfContact(PointOfContact pointOfContact){
+    public List<PointOfContact> createPointOfContact(List<PointOfContact> pointOfContact){
         LogUtils.logRequest(log,this,"建立PointOfContact：{}"+pointOfContact);
-        PointOfContact createdPointOfContact=pointOfContactRepository.save(pointOfContact);
+        List<PointOfContact> createdPointOfContact=pointOfContactRepository.saveAll(pointOfContact);
         LogUtils.logResponse(log,this,"建立PointOfContact：{}"+pointOfContact);
         return pointOfContact;
     }
