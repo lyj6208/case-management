@@ -2,6 +2,7 @@ package com.testing_company.case_management.controller;
 
 import com.testing_company.case_management.dto.FindTestCaseByCustomRequestDTO;
 import com.testing_company.case_management.dto.TestCaseResponseDTO;
+import com.testing_company.case_management.dto.TestCaseWithTestItemResponseDTO;
 import com.testing_company.case_management.model.TestCase;
 import com.testing_company.case_management.service.TestCaseService;
 import com.testing_company.case_management.util.LogUtils;
@@ -14,6 +15,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -25,6 +27,7 @@ import java.util.List;
 @AllArgsConstructor
 public class TestCaseController {
     private TestCaseService testCaseService;
+    @PreAuthorize("hasAnyRole('CASE_HANDLE_MEMBER')")
     @PostMapping("/create")
     public ResponseEntity<TestCase> createTestCase(@Valid @RequestBody TestCase testCase){
         LogUtils.logRequest(log,this,"建立TestCase：{}"+testCase);
@@ -46,15 +49,15 @@ public class TestCaseController {
         LogUtils.logResponse(log,this,"尋找TestCase_ID：{}"+testCaseId);
         return ResponseEntity.ok(foundTestCase);
     }
-    @GetMapping("/findByCustom2")
-    public ResponseEntity<List<TestCaseResponseDTO>> findByCustom2(@RequestBody FindTestCaseByCustomRequestDTO testCaseByCustomRequestDTO){
+    @GetMapping("/findRelatedToUser")
+    public ResponseEntity<List<TestCaseWithTestItemResponseDTO>> findRelatedToUser(@RequestBody FindTestCaseByCustomRequestDTO testCaseByCustomRequestDTO){
         LogUtils.logRequest(log, this,"找尋特定條件TestCase：{}",testCaseByCustomRequestDTO);
-        List<TestCaseResponseDTO> testCaseResponseDTOS=testCaseService.findByCustom2(testCaseByCustomRequestDTO);
+        List<TestCaseWithTestItemResponseDTO> testCaseResponseDTOS=testCaseService.findRelatedToUser(testCaseByCustomRequestDTO);
         LogUtils.logResponse(log, this,"找尋特定條件TestCase：{}",testCaseResponseDTOS);
         return ResponseEntity.ok(testCaseResponseDTOS);
     }
-    @GetMapping("/findByCustom")
-    public ResponseEntity<Page<TestCaseResponseDTO>> findTestCasesByCustom(
+    @GetMapping("/findAllWithTimeCustom")
+    public ResponseEntity<Page<TestCaseResponseDTO>> findAllTestCasesWithTimeCustom(
             @RequestParam(defaultValue = "0")int page,
             @RequestParam(defaultValue = "10")int size,
             @RequestParam(defaultValue = "id")String sortBy,

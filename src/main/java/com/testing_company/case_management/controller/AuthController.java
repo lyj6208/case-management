@@ -9,6 +9,8 @@ import com.testing_company.case_management.model.User;
 import com.testing_company.case_management.service.RefreshTokenService;
 import com.testing_company.case_management.service.UserService;
 import com.testing_company.case_management.util.JwtUtil;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -33,6 +35,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @Slf4j
 @Validated
+@Tag(name = "認證 API", description = "使用者認證相關 API")
 public class AuthController {
 
     private final AuthenticationManager authenticationManager;
@@ -42,6 +45,7 @@ public class AuthController {
     private final RefreshTokenService refreshTokenService;
 
     @PostMapping("/login")
+    @Operation(summary = "使用者登入", description = "使用者登入並取得 JWT token")
     public ResponseEntity<CommonObjectResponse<TokenResponseDTO>> login(@Valid @RequestBody LoginRequestDTO loginRequest){
         log.info("Login attempt for user：{}",loginRequest.getUsername());
         try {

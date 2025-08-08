@@ -86,4 +86,15 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
         }
         filterChain.doFilter(request, response);
     }
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
+        String path = request.getRequestURI();
+
+        // 跳過認證的路徑
+        return path.startsWith("/api/auth/") ||
+                path.startsWith("/swagger-ui/") ||
+                path.startsWith("/v3/api-docs/") ||
+                path.equals("/swagger-ui.html")||
+                path.equals("/favicon.ico");
+    }
 }

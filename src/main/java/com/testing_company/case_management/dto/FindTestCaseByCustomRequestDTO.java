@@ -1,5 +1,6 @@
 package com.testing_company.case_management.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.testing_company.case_management.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,6 +26,10 @@ public class FindTestCaseByCustomRequestDTO {
     private LocalDateTime caseEndDateTime=caseEndDate.plusDays(1).atStartOfDay();
     private List<String> caseStatus=new ArrayList<>();
     private Long teamId=null;
+    private Boolean isMine=false;
+    private Long experiment_operator_id;
+    private Long experiment_reviewer_id;
+    private Long report_conductor_id;
 
     public LocalDateTime getCaseStartDateTime(){
         return caseStartDate!=null?caseStartDate.atStartOfDay():caseStartDateTime;

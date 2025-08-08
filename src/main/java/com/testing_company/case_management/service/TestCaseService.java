@@ -2,6 +2,8 @@ package com.testing_company.case_management.service;
 
 import com.testing_company.case_management.dto.FindTestCaseByCustomRequestDTO;
 import com.testing_company.case_management.dto.TestCaseResponseDTO;
+import com.testing_company.case_management.dto.TestCaseWithTestItemDTO;
+import com.testing_company.case_management.dto.TestCaseWithTestItemResponseDTO;
 import com.testing_company.case_management.enums.CaseStatus;
 import com.testing_company.case_management.enums.SampleStatus;
 import com.testing_company.case_management.exception.NotFoundException;
@@ -101,22 +103,29 @@ public class TestCaseService {
         LogUtils.logResponse(log,this,"尋找TestCase_ID：{}"+testCaseId);
         return convertToDTO(foundTestCase);
     }
-    public List<TestCaseResponseDTO> findByCustom2(FindTestCaseByCustomRequestDTO findTestCaseByCustomRequestDTO){
+    public List<TestCaseWithTestItemResponseDTO> findRelatedToUser(FindTestCaseByCustomRequestDTO findTestCaseByCustomRequestDTO){
         LogUtils.logRequest(log, this,"找尋特定條件TestCase：{}",findTestCaseByCustomRequestDTO);
         Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
         String currentUsername=authentication.getName();
         User user=userRepository.findByUsername(currentUsername).orElseThrow(null);
+        System.out.println(user);
+        FindTestCaseByCustomRequestDTO finalConditions=new FindTestCaseByCustomRequestDTO();
+        BeanUtil.copyNotNullProperties(findTestCaseByCustomRequestDTO, finalConditions);
+        if(finalConditions.getCaseStatus().isEmpty()){finalConditions.setCaseStatus(null);}
 
-        FindTestCaseByCustomRequestDTO saveDTO=new FindTestCaseByCustomRequestDTO();
-        BeanUtil.copyNotNullProperties(findTestCaseByCustomRequestDTO, saveDTO);
-        if(saveDTO.getCaseStatus().isEmpty()){saveDTO.setCaseStatus(null);}
-        List<TestCase> testCases=testCaseRepository.findByCustom2(
-                saveDTO.getCaseStartDateTime(),
-                saveDTO.getCaseEndDateTime(),
-                saveDTO.getCaseStatus(),
-                saveDTO.getTeamId());
+        if(user.getRole().name().equals("LAB_MEMBER")){finalConditions.setExperiment_operator_id(user.getId());}else{finalConditions.setExperiment_operator_id(null);}
+        if(user.getRole().name().equals("LAB_LEADER")){finalConditions.setExperiment_reviewer_id(user.getId());}else{finalConditions.setExperiment_reviewer_id(null);}
+        if(user.getRole().name().equals("REPORT_MEMBER")){finalConditions.setReport_conductor_id(user.getId());}else{finalConditions.setReport_conductor_id(null);}
+
+        List<TestCaseWithTestItemDTO> testCases=testCaseRepository.findRelatedToUser(
+                finalConditions.getCaseStartDateTime(),
+                finalConditions.getCaseEndDateTime(),
+                finalConditions.getCaseStatus(),
+                finalConditions.getExperiment_operator_id(),
+                finalConditions.getExperiment_reviewer_id(),
+                finalConditions.getReport_conductor_id());
         LogUtils.logResponse(log, this,"找尋特定條件TestCase：{}",findTestCaseByCustomRequestDTO);
-        return testCases.stream().map(this::convertToDTO).toList();
+        return testCases.stream().map(this::convertToDTO2).toList();
     }
     public Page<TestCaseResponseDTO> findTestCasesByCustom(Pageable pageable, LocalDate caseStartDate_Begin, LocalDate caseStartDate_End){
         LogUtils.logRequest(log,this,"尋找特定條件之TestCase");
@@ -266,6 +275,29 @@ public class TestCaseService {
                 .createdTime(testCase.getCreatedTime())
                 .lastModifiedTime(testCase.getLastModifiedTime())
                 .lastModifiedBy(modifier!=null? modifier.getEmployeeNumber()+"_"+modifier.getName():null)
+                .build();
+    }
+    public TestCaseWithTestItemResponseDTO convertToDTO2(TestCaseWithTestItemDTO t){
+        TestItem testItem=BeanUtil.findIfIdPresent(t.getTiId(),testItemRepository::findById);
+        User experimentOperator=BeanUtil.findIfIdPresent(t.getExperimentOperatorId(),userRepository::findById);
+        User experimentReviewer=BeanUtil.findIfIdPresent(t.getExperimentReviewerId(),userRepository::findById);
+        User reportConductor=BeanUtil.findIfIdPresent(t.getReportConductorId(),userRepository::findById);
+
+        Team team=BeanUtil.findIfIdPresent(testItem.getTeamId(), teamRepository::findById);
+        Department department=BeanUtil.findIfIdPresent(team.getDepartmentId(), departmentRepository::findById);
+
+        return TestCaseWithTestItemResponseDTO.builder()
+                .testCaseNumber(t.getTestCaseNumber())
+                .sampleName(t.getSampleName())
+                .testItem(testItem.getName())
+                .caseStartTime(t.getCaseStartTime())
+                .labDeadline(t.getLabDeadline())
+                .reportDeadline(t.getReportDeadline())
+                .experimentOperator(experimentOperator!=null? experimentOperator.getEmployeeNumber()+experimentOperator.getName() : null)
+                .experimentReviewer(experimentReviewer!=null? experimentReviewer.getEmployeeNumber()+experimentReviewer.getName() : null)
+                .reportConductor(reportConductor!=null? reportConductor.getEmployeeNumber()+reportConductor.getName() : null)
+                .caseStatus(t.getCaseStatus())
+                .team(department.getDepartment()+team.getTeam())
                 .build();
     }
 }

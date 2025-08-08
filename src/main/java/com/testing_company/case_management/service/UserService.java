@@ -48,9 +48,9 @@ public class UserService {
     private final PasswordEncoder passwordEncoder;
     public User createUser(RegisterRequestDTO registerRequestDTO){
         LogUtils.logRequest(log,this,"建立User：{}",registerRequestDTO);
-//        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
-//        String currentUsername=authentication.getName();
-//        User currentUser=userRepository.findByUsername(currentUsername).orElseThrow(()->new NotFoundException("找不到使用者"));
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername=authentication.getName();
+        User currentUser=userRepository.findByUsername(currentUsername).orElseThrow(()->new NotFoundException("找不到使用者"));
 
         int TaiwanYear=registerRequestDTO.getHiredAt().getYear()-1911;
 
@@ -83,7 +83,7 @@ public class UserService {
         createdUser.setHiredAt(registerRequestDTO.getHiredAt());
         createdUser.setUsername(employeeNumber);
         createdUser.setPassword(passwordEncoder.encode(registerRequestDTO.getIdNumber().substring(8,10)));
-//        if(createdUser!=null){createdUser.setLastModifiedById(currentUser.getId());};
+        if(currentUser!=null){createdUser.setLastModifiedById(currentUser.getId());};
 
         userRepository.save(createdUser);
         LogUtils.logResponse(log,this,"建立User：{}",registerRequestDTO);
