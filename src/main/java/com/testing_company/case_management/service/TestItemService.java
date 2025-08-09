@@ -13,6 +13,8 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,6 +30,12 @@ public class TestItemService {
 
     public List<TestItem> createTestItem(List<TestItem> testItem){
         LogUtils.logRequest(log,this,"建立TestItem：{}"+testItem);
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername=authentication.getName();
+        User currentUser=userRepository.findByUsername(currentUsername).orElseThrow(()->new NotFoundException("找不到使用者"));
+        for(TestItem t:testItem){
+            t.setLastModifiedById(currentUser.getId());
+        }
         List<TestItem> createdTestItem=testItemRepository.saveAll(testItem);
         LogUtils.logResponse(log,this,"建立TestItem：{}"+testItem);
         return createdTestItem;

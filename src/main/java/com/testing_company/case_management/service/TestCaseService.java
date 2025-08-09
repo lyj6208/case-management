@@ -68,6 +68,10 @@ public class TestCaseService {
     }
     public List<TestCase> createTestCases(List<TestCase> testCase){
         LogUtils.logRequest(log,this,"建立TestCase：{}"+testCase);
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername=authentication.getName();
+        User currentUser=userRepository.findByUsername(currentUsername).orElseThrow(()->new NotFoundException("找不到使用者"));
+
         List<TestCase>testCasesToSave=new ArrayList<>();
         for(TestCase t:testCase){
         //處理testCaseNumber
@@ -90,8 +94,9 @@ public class TestCaseService {
 
         t.setCaseStatus(CaseStatus.CASE_CREATED);
         t.setSampleStatus(SampleStatus.AWAITING_DELIVERY);
+            t.setLastModifiedById(currentUser.getId());
+            t.setCaseHandlerId(currentUser.getId());
 
-        //TODO: caseHandlerID、lastModifiedByID待Security建立後處理
         TestCase createdTestCase=testCaseRepository.save(t);
         testCasesToSave.add(createdTestCase);}
         LogUtils.logResponse(log,this,"建立TestCase：{}"+testCase);
@@ -195,9 +200,13 @@ public class TestCaseService {
     public TestCaseResponseDTO submitTestCaseToReview(Long testCaseId, String testResult){
         LogUtils.logRequest(log,this,"提交TestCase_ID：{}至審核"+testCaseId);
         TestCase submittedTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername=authentication.getName();
+        User currentUser=userRepository.findByUsername(currentUsername).orElseThrow(()->new NotFoundException("找不到user"));
         submittedTestCase.setCaseStatus(CaseStatus.UNDER_REVIEW);
         submittedTestCase.setTestResult(testResult);
         submittedTestCase.setExperimentEndTime(Timestamp.valueOf(LocalDateTime.now()));
+        submittedTestCase.setLastModifiedById(currentUser.getId());
         testCaseRepository.save(submittedTestCase);
         LogUtils.logResponse(log,this,"提交TestCase_ID：{}至審核"+testCaseId);
         return convertToDTO(submittedTestCase);
@@ -215,8 +224,12 @@ public class TestCaseService {
     public TestCaseResponseDTO submitTestCaseToReport(Long testCaseId){
         LogUtils.logRequest(log,this,"提交TestCase_ID：{}至報告組"+testCaseId);
         TestCase submittedTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername=authentication.getName();
+        User currentUser=userRepository.findByUsername(currentUsername).orElseThrow(()->new NotFoundException("找不到user"));
         submittedTestCase.setCaseStatus(CaseStatus.REPORT_IN_PREPARATION);
         submittedTestCase.setExperimentReviewTime(Timestamp.valueOf(LocalDateTime.now()));
+        submittedTestCase.setLastModifiedById(currentUser.getId());
         testCaseRepository.save(submittedTestCase);
         LogUtils.logResponse(log,this,"提交TestCase_ID：{}至報告組"+testCaseId);
         return convertToDTO(submittedTestCase);
@@ -224,8 +237,12 @@ public class TestCaseService {
     public TestCaseResponseDTO finishTestCaseReport(Long testCaseId){
         LogUtils.logRequest(log,this,"完成TestCase_ID：{}之報告"+testCaseId);
         TestCase finishedTestCase=testCaseRepository.findById(testCaseId).orElseThrow(()->new NotFoundException("找不到ID為"+testCaseId+"之TestCase"));
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername=authentication.getName();
+        User currentUser=userRepository.findByUsername(currentUsername).orElseThrow(()->new NotFoundException("找不到user"));
         finishedTestCase.setReportCloseTime(Timestamp.valueOf(LocalDateTime.now()));
         finishedTestCase.setCaseStatus(CaseStatus.CLOSED);
+        finishedTestCase.setLastModifiedById(currentUser.getId());
         testCaseRepository.save(finishedTestCase);
         LogUtils.logResponse(log,this,"完成TestCase_ID：{}之報告"+testCaseId);
         return convertToDTO(finishedTestCase);

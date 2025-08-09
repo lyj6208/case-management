@@ -14,6 +14,8 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,6 +30,12 @@ public class CustomerService {
 
     public List<Customer> createCustomer(List<Customer> customer){
         LogUtils.logRequest(log,this,"建立Customer：{}",customer);
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername=authentication.getName();
+        User currentUser=userRepository.findByUsername(currentUsername).orElseThrow(()->new NotFoundException("找不到使用者"));
+        for(Customer c:customer){
+            c.setLastModifiedById(currentUser.getId());
+        }
         List<Customer> createdCustomer=customerRepository.saveAll(customer);
         LogUtils.logResponse(log,this,"建立Customer：{}",customer);
         return createdCustomer;
