@@ -1,8 +1,7 @@
 package com.testing_company.case_management.controller;
 
-import com.testing_company.case_management.dto.TeamResponseDTO;
-import com.testing_company.case_management.model.JobLevel;
-import com.testing_company.case_management.model.Team;
+import com.testing_company.case_management.dto.responseDTO.TeamResponseDTO;
+import com.testing_company.case_management.dto.requestDTO.TeamRequestDTO;
 import com.testing_company.case_management.service.TeamService;
 import com.testing_company.case_management.util.LogUtils;
 import jakarta.validation.Valid;
@@ -25,10 +24,10 @@ import java.util.List;
 public class TeamController {
     private final TeamService teamService;
     @PostMapping("/create")
-    public ResponseEntity<List<Team>> createTeam(@Valid @RequestBody List<Team> team){
-        LogUtils.logRequest(log,this,"建立Team：{}"+team);
-        List<Team> createdResult=teamService.createTeam(team);
-        LogUtils.logResponse(log,this,"建立Team：{}"+team);
+    public ResponseEntity<List<TeamResponseDTO>> createTeam(@Valid @RequestBody List<TeamRequestDTO> teamRequestDTOS){
+        LogUtils.logRequest(log,this,"建立Team：{}"+teamRequestDTOS);
+        List<TeamResponseDTO> createdResult=teamService.createTeam(teamRequestDTOS);
+        LogUtils.logResponse(log,this,"建立Team：{}"+teamRequestDTOS);
         return ResponseEntity.status(HttpStatus.CREATED).header("X-message","Successfully create Team").body(createdResult);
     }
     @GetMapping("/findById/{teamId}")
@@ -54,9 +53,9 @@ public class TeamController {
         return ResponseEntity.status(HttpStatus.OK).body(findResult);
     }
     @PostMapping("/update/{teamId}")
-    public ResponseEntity<?>updateTeamById(@PathVariable Long teamId, @Valid@RequestBody Team inputtedTeam){
+    public ResponseEntity<?>updateTeamById(@PathVariable Long teamId, @Valid@RequestBody TeamRequestDTO newTeam){
         LogUtils.logRequest(log,this,"更新Team_ID：{}"+teamId);
-        Team updatedTeam=teamService.updateTeamById(teamId, inputtedTeam);
+        TeamResponseDTO updatedTeam=teamService.updateTeamById(teamId, newTeam);
         LogUtils.logResponse(log,this,"更新Team_ID：{}"+teamId);
         return ResponseEntity.ok(updatedTeam);
 

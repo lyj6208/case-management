@@ -1,5 +1,6 @@
 package com.testing_company.case_management.controller;
 
+import com.testing_company.case_management.dto.requestDTO.JobLevelRequestDTO;
 import com.testing_company.case_management.model.JobLevel;
 import com.testing_company.case_management.service.JobLevelService;
 import com.testing_company.case_management.util.LogUtils;
@@ -27,11 +28,12 @@ import java.util.List;
 public class JobLevelController {
     private final JobLevelService jobLevelService;
 
+
     @PostMapping("/create")
-    public ResponseEntity<List<JobLevel>> createJobLevel(@Valid @RequestBody List<JobLevel> jobLevel){
-        LogUtils.logRequest(log,this,"建立JobLevel：{}",jobLevel);
-        List<JobLevel> createdResult=jobLevelService.createJobLevel(jobLevel);
-        LogUtils.logResponse(log,this, "建立JobLevel：{}",jobLevel);
+    public ResponseEntity<List<JobLevel>> createJobLevel(@Valid @RequestBody List<JobLevelRequestDTO> jobLevelRequestDTOs){
+        LogUtils.logRequest(log,this,"建立JobLevel：{}",jobLevelRequestDTOs);
+        List<JobLevel> createdResult=jobLevelService.createJobLevel(jobLevelRequestDTOs);
+        LogUtils.logResponse(log,this, "建立JobLevel：{}",jobLevelRequestDTOs);
         return ResponseEntity.status(HttpStatus.CREATED).header("X-message","Successfully create JobLevel").body(createdResult);
     }
     @GetMapping("/findById/{jobLevelId}")
@@ -57,7 +59,7 @@ public class JobLevelController {
         return ResponseEntity.status(HttpStatus.OK).body(findResult);
     }
     @PostMapping("/update/{jobLevelId}")
-    public ResponseEntity<?>updateJobLevelById(@PathVariable Long jobLevelId, @Valid@RequestBody JobLevel newjobLevel){
+    public ResponseEntity<?>updateJobLevelById(@PathVariable Long jobLevelId, @Valid@RequestBody JobLevelRequestDTO newjobLevel){
         LogUtils.logRequest(log,this,"更新JobLevel_ID：{}",jobLevelId);
         JobLevel updateResult=jobLevelService.updateJobLevelById(jobLevelId, newjobLevel);
         LogUtils.logResponse(log,this,"更新JobLevel_ID：{}",jobLevelId);

@@ -2,10 +2,8 @@ package com.testing_company.case_management.controller;
 
 import com.testing_company.case_management.dto.CommonObjectResponse;
 import com.testing_company.case_management.dto.LoginRequestDTO;
-import com.testing_company.case_management.dto.RegisterRequestDTO;
 import com.testing_company.case_management.dto.TokenResponseDTO;
 import com.testing_company.case_management.model.RefreshToken;
-import com.testing_company.case_management.model.User;
 import com.testing_company.case_management.service.RefreshTokenService;
 import com.testing_company.case_management.service.UserService;
 import com.testing_company.case_management.util.JwtUtil;
@@ -14,7 +12,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

@@ -17,6 +17,7 @@ public class BeanUtil {
             } catch (IllegalAccessException ignored){}
         }
     }
+
     public static <T, ID> T findIfIdPresent(ID id, Function<ID, Optional<T>> finder){
         return id!=null?finder.apply(id).orElse(null):null;
     }

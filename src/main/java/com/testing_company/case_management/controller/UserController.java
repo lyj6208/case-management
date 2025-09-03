@@ -1,8 +1,7 @@
 package com.testing_company.case_management.controller;
 
-import com.testing_company.case_management.dto.RegisterRequestDTO;
-import com.testing_company.case_management.dto.TeamResponseDTO;
-import com.testing_company.case_management.dto.UserResponseDTO;
+import com.testing_company.case_management.dto.requestDTO.RegisterRequestDTO;
+import com.testing_company.case_management.dto.responseDTO.UserResponseDTO;
 import com.testing_company.case_management.model.User;
 import com.testing_company.case_management.service.UserService;
 import com.testing_company.case_management.util.LogUtils;
@@ -13,10 +12,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,16 +26,16 @@ import java.util.List;
 public class UserController {
     private final UserService userService;
     @PostMapping("/create")
-    public ResponseEntity<User> createUser(@Valid @RequestBody RegisterRequestDTO registerRequestDTO){
+    public ResponseEntity<UserResponseDTO> createUser(@Valid @RequestBody RegisterRequestDTO registerRequestDTO){
         LogUtils.logRequest(log,this,"建立User：{}",registerRequestDTO);
-        User createdUser=userService.createUser(registerRequestDTO);
+        UserResponseDTO createdUser=userService.createUser(registerRequestDTO);
         LogUtils.logResponse(log,this,"建立User：{}",registerRequestDTO);
         return ResponseEntity.ok(createdUser);
     }
     @PostMapping("/createBatch")
-    public ResponseEntity<List<User>> createUsers(@Valid @RequestBody List<RegisterRequestDTO> registerRequestDTO){
+    public ResponseEntity<List<UserResponseDTO>> createUsers(@Valid @RequestBody List<RegisterRequestDTO> registerRequestDTO){
         LogUtils.logRequest(log,this,"建立User：{}",registerRequestDTO);
-        List<User> createdUser=userService.createUsers(registerRequestDTO);
+        List<UserResponseDTO> createdUser=userService.createUsers(registerRequestDTO);
         LogUtils.logResponse(log,this,"建立User：{}",registerRequestDTO);
         return ResponseEntity.ok(createdUser);
     }

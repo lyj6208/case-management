@@ -47,7 +47,7 @@ public class TestCaseService {
         TestItem testItem= BeanUtil.findIfIdPresent(testCase.getTestItemId(),testItemRepository::findById);
         Team team=BeanUtil.findIfIdPresent(testItem.getTeamId(),teamRepository::findById);
         Department department=BeanUtil.findIfIdPresent(team.getDepartmentId(),departmentRepository::findById);
-        testCase.setTestCaseNumber(department.getAbbreviation()+formattedNumber);
+        testCase.setTestCaseNumber(department.getAbbreviationInEnglish()+formattedNumber);
 
         //處理testingdays&testingprice
         if(testCase.getTestingDays()==null){testCase.setTestingDays(testItem.getTestingDays());};
@@ -81,7 +81,7 @@ public class TestCaseService {
         TestItem testItem= BeanUtil.findIfIdPresent(t.getTestItemId(),testItemRepository::findById);
         Team team=BeanUtil.findIfIdPresent(testItem.getTeamId(),teamRepository::findById);
         Department department=BeanUtil.findIfIdPresent(team.getDepartmentId(),departmentRepository::findById);
-        t.setTestCaseNumber(department.getAbbreviation()+formattedNumber);
+        t.setTestCaseNumber(department.getAbbreviationInEnglish()+formattedNumber);
 
         //處理testingdays&testingprice
         if(t.getTestingDays()==null){t.setTestingDays(testItem.getTestingDays());};
@@ -271,8 +271,8 @@ public class TestCaseService {
                 .testItem_name(testItem!=null?testItem.getName():null)
                 .testingDays(testCase.getTestingDays())
                 .testingPrice(testCase.getTestingPrice())
-                .department(department!=null?department.getDepartment():null)
-                .team(team!=null?team.getTeam():null)
+                .department(department!=null?department.getDepartmentNameInChinese():null)
+                .team(team!=null?team.getTeamNameInChinese():null)
                 .caseStartTime(testCase.getCaseStartTime())
                 .experimentEndTime(testCase.getExperimentEndTime())
                 .experimentReviewTime(testCase.getExperimentReviewTime())
@@ -314,7 +314,7 @@ public class TestCaseService {
                 .experimentReviewer(experimentReviewer!=null? experimentReviewer.getEmployeeNumber()+experimentReviewer.getName() : null)
                 .reportConductor(reportConductor!=null? reportConductor.getEmployeeNumber()+reportConductor.getName() : null)
                 .caseStatus(t.getCaseStatus())
-                .team(department.getDepartment()+team.getTeam())
+                .team(department.getDepartmentNameInChinese()+team.getTeamNameInChinese())
                 .build();
     }
 }

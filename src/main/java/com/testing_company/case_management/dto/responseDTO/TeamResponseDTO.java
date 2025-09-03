@@ -1,14 +1,15 @@
-package com.testing_company.case_management.dto;
+package com.testing_company.case_management.dto.responseDTO;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import org.springframework.stereotype.Component;
 
 @Data
 @Builder
+@AllArgsConstructor
 public class TeamResponseDTO {
+    private long id;
     @JsonProperty("部門")
     private String department;
     @JsonProperty("組別")

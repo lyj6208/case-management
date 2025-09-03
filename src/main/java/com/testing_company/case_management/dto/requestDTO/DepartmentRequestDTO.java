@@ -1,36 +1,25 @@
-package com.testing_company.case_management.model;
+package com.testing_company.case_management.dto.requestDTO;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.testing_company.case_management.validation.Chinese;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Entity
-@Table(name="departments")
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class Department {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @NotBlank(message = "department不可為空")
-    @Column(name="department")
+public class DepartmentRequestDTO {
+//    @NotBlank(message = "Department名稱不得為空")
     @Chinese
     @JsonProperty("部門名稱(中文)")
-    private String departmentNameInChinese;
+    public String departmentNameInChinese;
 
-    @NotBlank(message = "abbreviation不可為空")
+//    @NotBlank(message = "abbreviation不可為空")
     @Size(min=2, max=2, message = "部門代碼必須是兩個大寫英文字母")
     @Pattern(regexp = "^[A-Z]{2}$",message = "部門代碼必須是兩個大寫英文字母")
-    @Column(name="abbreviation")
     @JsonProperty("部門縮寫(英文)")
     private String abbreviationInEnglish;
 }

@@ -1,4 +1,4 @@
-package com.testing_company.case_management.dto;
+package com.testing_company.case_management.dto.responseDTO;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.testing_company.case_management.enums.Role;
@@ -39,7 +39,7 @@ public class UserResponseDTO {
     private String department;
     @JsonProperty("組別")
     private String team;
-    @JsonProperty("系統腳色")
+    @JsonProperty("系統角色")
     private Role role;
     @JsonProperty("聘僱起始日")
     private LocalDate hiredAt;

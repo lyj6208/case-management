@@ -1,5 +1,6 @@
 package com.testing_company.case_management.controller;
 
+import com.testing_company.case_management.dto.requestDTO.DepartmentRequestDTO;
 import com.testing_company.case_management.model.Department;
 import com.testing_company.case_management.service.DepartmentService;
 import com.testing_company.case_management.util.LogUtils;
@@ -24,10 +25,10 @@ public class DepartmentController {
     public final DepartmentService departmentService;
 
     @PostMapping("/create")
-    public ResponseEntity<List<Department>>createDepartment(@Valid @RequestBody List<Department> department){
-        LogUtils.logRequest(log,this,"建立Department"+department);
-        List<Department> createdDepartment=departmentService.createDepartment(department);
-        LogUtils.logResponse(log,this,"建立Department"+department);
+    public ResponseEntity<List<Department>>createDepartment(@Valid @RequestBody List<DepartmentRequestDTO> departmentRequestDTOS){
+        LogUtils.logRequest(log,this,"建立Department"+departmentRequestDTOS);
+        List<Department> createdDepartment=departmentService.createDepartment(departmentRequestDTOS);
+        LogUtils.logResponse(log,this,"建立Department"+departmentRequestDTOS);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdDepartment);
     }
 
@@ -56,10 +57,10 @@ public class DepartmentController {
     @PostMapping("/update/{departmentId}")
     public ResponseEntity<Department>updateDepartmentById(
             @PathVariable Long departmentId,
-            @RequestBody Department department
+            @RequestBody DepartmentRequestDTO departmentRequestDTO
     ){
         LogUtils.logRequest(log,this,"更新Department_ID"+departmentId);
-        Department updatedDepartment=departmentService.updateDepartmentById(departmentId, department);
+        Department updatedDepartment=departmentService.updateDepartmentById(departmentId, departmentRequestDTO);
         LogUtils.logResponse(log,this,"更新Department_ID"+departmentId);
         return ResponseEntity.ok(updatedDepartment);
     }

@@ -1,27 +1,27 @@
-2025-08-09 19:51:43 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 14264 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
-2025-08-09 19:51:43 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-09 19:51:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-09 19:51:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-09 19:51:47 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-09 19:51:47 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 372 ms. Found 10 JPA repository interfaces.
-2025-08-09 19:51:50 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-09 19:51:50 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-09 19:51:50 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-09 19:51:50 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-09 19:51:50 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7396 ms
-2025-08-09 19:51:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-09 19:51:55 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c90e9fa
-2025-08-09 19:51:55 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-09 19:51:56 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
-2025-08-09 19:51:56 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
-2025-08-09 19:51:56 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.230s)
-2025-08-09 19:51:56 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
-2025-08-09 19:51:56 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
-2025-08-09 19:51:56 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-09 19:51:57 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-09 19:51:57 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-09 19:51:58 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-09 19:51:58 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-08-31 20:12:14 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 20136 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
+2025-08-31 20:12:14 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-31 20:12:14 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-31 20:12:14 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-31 20:12:18 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-31 20:12:18 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 314 ms. Found 10 JPA repository interfaces.
+2025-08-31 20:12:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-31 20:12:21 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-31 20:12:21 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-31 20:12:21 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-31 20:12:21 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6692 ms
+2025-08-31 20:12:21 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-31 20:12:22 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e39bce8
+2025-08-31 20:12:22 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-31 20:12:22 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
+2025-08-31 20:12:22 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2025-08-31 20:12:23 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.305s)
+2025-08-31 20:12:23 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
+2025-08-31 20:12:23 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
+2025-08-31 20:12:23 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-31 20:12:23 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-31 20:12:24 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-31 20:12:24 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-31 20:12:25 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 9.3
@@ -29,42 +29,50 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-08-09 19:52:00 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-09 19:52:00 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 19:52:01 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-09 19:52:02 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
-2025-08-09 19:52:03 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-09 19:52:04 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-09 19:52:04 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-09 19:52:04 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 23.799 seconds (process running for 25.391)
-2025-08-09 19:52:07 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-09 19:52:07 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-09 19:52:07 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 46 ms
-2025-08-09 19:52:09 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed: java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdviceBean.<init>(java.lang.Object)'] with root cause
-java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdviceBean.<init>(java.lang.Object)'
-	at org.springdoc.core.service.GenericResponseService.lambda$getGenericMapResponse$8(GenericResponseService.java:702)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
-	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
-	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
-	at org.springdoc.core.service.GenericResponseService.getGenericMapResponse(GenericResponseService.java:704)
-	at org.springdoc.core.service.GenericResponseService.build(GenericResponseService.java:246)
-	at org.springdoc.api.AbstractOpenApiResource.calculatePath(AbstractOpenApiResource.java:499)
-	at org.springdoc.api.AbstractOpenApiResource.calculatePath(AbstractOpenApiResource.java:676)
-	at org.springdoc.webmvc.api.OpenApiResource.lambda$calculatePath$11(OpenApiResource.java:219)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at org.springdoc.webmvc.api.OpenApiResource.calculatePath(OpenApiResource.java:200)
-	at org.springdoc.webmvc.api.OpenApiResource.lambda$getPaths$2(OpenApiResource.java:170)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at org.springdoc.webmvc.api.OpenApiResource.getPaths(OpenApiResource.java:149)
-	at org.springdoc.api.AbstractOpenApiResource.getOpenApi(AbstractOpenApiResource.java:353)
-	at org.springdoc.webmvc.api.OpenApiResource.openapiJson(OpenApiResource.java:124)
-	at org.springdoc.webmvc.api.OpenApiWebMvcResource.openapiJson(OpenApiWebMvcResource.java:111)
+2025-08-31 20:12:29 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-31 20:12:29 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-31 20:12:29 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-31 20:12:31 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
+2025-08-31 20:12:32 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-31 20:12:33 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-31 20:12:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-31 20:12:33 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 20.999 seconds (process running for 22.368)
+2025-08-31 20:14:22 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-31 20:14:22 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-31 20:14:22 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-08-31 20:14:22 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2025-08-31 20:15:23 [http-nio-8080-exec-4] INFO  c.t.c.controller.AuthController - Login attempt for user：1090001
+2025-08-31 20:15:23 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
+2025-08-31 20:15:23 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
+2025-08-31 20:23:03 [http-nio-8080-exec-7] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
+2025-08-31 20:23:03 [http-nio-8080-exec-7] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
+2025-08-31 20:23:03 [http-nio-8080-exec-7] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1090001 for request：/api/user/create
+2025-08-31 20:23:03 [http-nio-8080-exec-7] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1090001 is expiring soon
+2025-08-31 20:23:03 [http-nio-8080-exec-7] INFO  c.t.c.controller.UserController - [收到請求]建立User：RegisterRequestDTO(name=炭志郎, sex=MALE, idNumber=K339755123, birthday=1987-01-27, phone=0955666777, emailPrivate=jilon@example.com, jobLevelId=1, teamId=2, role=LAB_MEMBER, hiredAt=2025-08-31)	[來自]類別：UserController，方法：createUser
+2025-08-31 20:23:03 [http-nio-8080-exec-7] INFO  c.t.c.service.UserService - [收到請求]建立User：RegisterRequestDTO(name=炭志郎, sex=MALE, idNumber=K339755123, birthday=1987-01-27, phone=0955666777, emailPrivate=jilon@example.com, jobLevelId=1, teamId=2, role=LAB_MEMBER, hiredAt=2025-08-31)	[來自]類別：UserService，方法：createUser
+2025-08-31 20:23:03 [http-nio-8080-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.modelmapper.MappingException: ModelMapper mapping errors:
+
+1) Converter org.modelmapper.internal.converter.NumberConverter@513b38e3 failed to convert java.lang.String to java.lang.Long.
+
+1 error] with root cause
+java.lang.NumberFormatException: For input string: "K339755123"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Long.parseLong(Long.java:711)
+	at java.base/java.lang.Long.valueOf(Long.java:1163)
+	at org.modelmapper.internal.converter.NumberConverter.numberFor(NumberConverter.java:171)
+	at org.modelmapper.internal.converter.NumberConverter.convert(NumberConverter.java:75)
+	at org.modelmapper.internal.converter.NumberConverter.convert(NumberConverter.java:57)
+	at org.modelmapper.internal.MappingEngineImpl.convert(MappingEngineImpl.java:306)
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:109)
+	at org.modelmapper.internal.MappingEngineImpl.setDestinationValue(MappingEngineImpl.java:245)
+	at org.modelmapper.internal.MappingEngineImpl.propertyMap(MappingEngineImpl.java:187)
+	at org.modelmapper.internal.MappingEngineImpl.typeMap(MappingEngineImpl.java:151)
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:114)
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:71)
+	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:589)
+	at org.modelmapper.ModelMapper.map(ModelMapper.java:422)
+	at com.testing_company.case_management.service.UserService.createUser(UserService.java:65)
+	at com.testing_company.case_management.controller.UserController.createUser(UserController.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -78,8 +86,8 @@ java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdvi
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -108,7 +116,7 @@ java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdvi
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at com.testing_company.case_management.configuration.JWTAuthenticationFilter.doFilterInternal(JWTAuthenticationFilter.java:40)
+	at com.testing_company.case_management.configuration.JWTAuthenticationFilter.doFilterInternal(JWTAuthenticationFilter.java:87)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
@@ -174,62 +182,35 @@ java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdvi
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-2025-08-09 20:04:22 [http-nio-8080-exec-4] INFO  c.t.c.controller.AuthController - Login attempt for user：1090001
-2025-08-09 20:04:23 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:04:23 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
-2025-08-09 20:08:54 [http-nio-8080-exec-9] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:08:54 [http-nio-8080-exec-9] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
-2025-08-09 20:08:54 [http-nio-8080-exec-9] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1090001 for request：/api/user/create
-2025-08-09 20:08:54 [http-nio-8080-exec-9] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1090001 is expiring soon
-2025-08-09 20:08:54 [http-nio-8080-exec-9] INFO  c.t.c.controller.UserController - [收到請求]建立User：RegisterRequestDTO(name=李維堂, sex=MALE, idNumber=K334455667, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=LAB_LEADER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserController，方法：createUser
-2025-08-09 20:08:54 [http-nio-8080-exec-9] INFO  c.t.c.service.UserService - [收到請求]建立User：RegisterRequestDTO(name=李維堂, sex=MALE, idNumber=K334455667, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=LAB_LEADER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserService，方法：createUser
-2025-08-09 20:08:54 [http-nio-8080-exec-9] WARN  c.t.c.e.GlobalExceptionHandler - 資料重複：身分證字號已存在資料庫，請確認資料是否重複建立
-2025-08-09 20:08:54 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.testing_company.case_management.exception.DuplicateException: 身分證字號已存在資料庫，請確認資料是否重複建立]
-2025-08-09 20:09:10 [http-nio-8080-exec-1] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:09:10 [http-nio-8080-exec-1] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
-2025-08-09 20:09:10 [http-nio-8080-exec-1] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1090001 for request：/api/user/create
-2025-08-09 20:09:10 [http-nio-8080-exec-1] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1090001 is expiring soon
-2025-08-09 20:09:10 [http-nio-8080-exec-1] INFO  c.t.c.controller.UserController - [收到請求]建立User：RegisterRequestDTO(name=李維堂, sex=MALE, idNumber=K339755667, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=LAB_LEADER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserController，方法：createUser
-2025-08-09 20:09:10 [http-nio-8080-exec-1] INFO  c.t.c.service.UserService - [收到請求]建立User：RegisterRequestDTO(name=李維堂, sex=MALE, idNumber=K339755667, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=LAB_LEADER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserService，方法：createUser
-2025-08-09 20:09:10 [http-nio-8080-exec-1] INFO  c.t.c.service.UserService - [回覆請求]建立User：RegisterRequestDTO(name=李維堂, sex=MALE, idNumber=K339755667, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=LAB_LEADER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserService，方法：createUser
-2025-08-09 20:09:10 [http-nio-8080-exec-1] INFO  c.t.c.controller.UserController - [回覆請求]建立User：RegisterRequestDTO(name=李維堂, sex=MALE, idNumber=K339755667, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=LAB_LEADER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserController，方法：createUser
-2025-08-09 20:10:40 [http-nio-8080-exec-5] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:10:40 [http-nio-8080-exec-5] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
-2025-08-09 20:10:40 [http-nio-8080-exec-5] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1090001 for request：/api/user/create
-2025-08-09 20:10:40 [http-nio-8080-exec-5] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1090001 is expiring soon
-2025-08-09 20:10:40 [http-nio-8080-exec-5] INFO  c.t.c.controller.UserController - [收到請求]建立User：RegisterRequestDTO(name=李家堂, sex=MALE, idNumber=K339755662, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=REPORT_MEMBER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserController，方法：createUser
-2025-08-09 20:10:40 [http-nio-8080-exec-5] INFO  c.t.c.service.UserService - [收到請求]建立User：RegisterRequestDTO(name=李家堂, sex=MALE, idNumber=K339755662, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=REPORT_MEMBER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserService，方法：createUser
-2025-08-09 20:10:40 [http-nio-8080-exec-5] INFO  c.t.c.service.UserService - [回覆請求]建立User：RegisterRequestDTO(name=李家堂, sex=MALE, idNumber=K339755662, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=REPORT_MEMBER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserService，方法：createUser
-2025-08-09 20:10:40 [http-nio-8080-exec-5] INFO  c.t.c.controller.UserController - [回覆請求]建立User：RegisterRequestDTO(name=李家堂, sex=MALE, idNumber=K339755662, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=REPORT_MEMBER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserController，方法：createUser
-2025-08-09 20:15:26 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-09 20:15:26 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-09 20:15:26 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 20:15:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-09 20:15:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-09 20:15:38 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 6420 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
-2025-08-09 20:15:38 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-09 20:15:38 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-09 20:15:38 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-09 20:15:42 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-09 20:15:42 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 273 ms. Found 10 JPA repository interfaces.
-2025-08-09 20:15:44 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-09 20:15:44 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-09 20:15:44 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-09 20:15:44 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-09 20:15:44 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5895 ms
-2025-08-09 20:15:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-09 20:15:45 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a86882f
-2025-08-09 20:15:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-09 20:15:46 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
-2025-08-09 20:15:46 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
-2025-08-09 20:15:46 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.137s)
-2025-08-09 20:15:46 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
-2025-08-09 20:15:46 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
-2025-08-09 20:15:46 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-09 20:15:46 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-09 20:15:47 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-09 20:15:48 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-09 20:15:48 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-08-31 20:24:38 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-31 20:24:38 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-31 20:24:38 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-31 20:24:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-31 20:24:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-31 20:24:53 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 16060 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
+2025-08-31 20:24:53 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-31 20:24:53 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-31 20:24:53 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-31 20:24:57 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-31 20:24:57 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 279 ms. Found 10 JPA repository interfaces.
+2025-08-31 20:24:59 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-31 20:24:59 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-31 20:24:59 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-31 20:24:59 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-31 20:24:59 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6199 ms
+2025-08-31 20:25:00 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-31 20:25:01 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15adfde0
+2025-08-31 20:25:01 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-31 20:25:01 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
+2025-08-31 20:25:01 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2025-08-31 20:25:01 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.155s)
+2025-08-31 20:25:02 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
+2025-08-31 20:25:02 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
+2025-08-31 20:25:02 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-31 20:25:02 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-31 20:25:02 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-31 20:25:03 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-31 20:25:03 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 9.3
@@ -237,97 +218,54 @@ java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdvi
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-08-09 20:15:51 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-09 20:15:51 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 20:15:52 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-09 20:15:53 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
-2025-08-09 20:15:53 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-09 20:15:55 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-09 20:15:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-09 20:15:55 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 18.861 seconds (process running for 20.248)
-2025-08-09 20:16:29 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-09 20:16:29 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-09 20:16:29 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
-2025-08-09 20:16:29 [http-nio-8080-exec-1] INFO  c.t.c.controller.AuthController - Login attempt for user：114002
-2025-08-09 20:16:30 [http-nio-8080-exec-1] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：114002	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:16:30 [http-nio-8080-exec-1] ERROR c.t.c.service.UserDetailServiceImpl - User not found：114002
-2025-08-09 20:16:30 [http-nio-8080-exec-1] WARN  c.t.c.controller.AuthController - Login failed for user 114002: Invalid credentials
-2025-08-09 20:16:42 [http-nio-8080-exec-3] INFO  c.t.c.controller.AuthController - Login attempt for user：1140002
-2025-08-09 20:16:42 [http-nio-8080-exec-3] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1140002	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:16:42 [http-nio-8080-exec-3] INFO  c.t.c.service.UserDetailServiceImpl - User 1140002 laoded with role：REPORT_MEMBER
-2025-08-09 20:17:04 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1140002	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:17:04 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - User 1140002 laoded with role：REPORT_MEMBER
-2025-08-09 20:17:04 [http-nio-8080-exec-4] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1140002 for request：/api/customer/create
-2025-08-09 20:17:04 [http-nio-8080-exec-4] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1140002 is expiring soon
-2025-08-09 20:18:25 [http-nio-8080-exec-7] INFO  c.t.c.controller.AuthController - Login attempt for user：1090001
-2025-08-09 20:18:25 [http-nio-8080-exec-7] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:18:25 [http-nio-8080-exec-7] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
-2025-08-09 20:18:42 [http-nio-8080-exec-8] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:18:42 [http-nio-8080-exec-8] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
-2025-08-09 20:18:42 [http-nio-8080-exec-8] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1090001 for request：/api/user/create
-2025-08-09 20:18:42 [http-nio-8080-exec-8] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1090001 is expiring soon
-2025-08-09 20:18:42 [http-nio-8080-exec-8] INFO  c.t.c.controller.UserController - [收到請求]建立User：RegisterRequestDTO(name=李家堂, sex=MALE, idNumber=K339755662, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=REPORT_MEMBER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserController，方法：createUser
-2025-08-09 20:18:42 [http-nio-8080-exec-8] INFO  c.t.c.service.UserService - [收到請求]建立User：RegisterRequestDTO(name=李家堂, sex=MALE, idNumber=K339755662, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=REPORT_MEMBER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserService，方法：createUser
-2025-08-09 20:18:42 [http-nio-8080-exec-8] INFO  c.t.c.service.UserService - [回覆請求]建立User：RegisterRequestDTO(name=李家堂, sex=MALE, idNumber=K339755662, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=REPORT_MEMBER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserService，方法：createUser
-2025-08-09 20:18:42 [http-nio-8080-exec-8] INFO  c.t.c.controller.UserController - [回覆請求]建立User：RegisterRequestDTO(name=李家堂, sex=MALE, idNumber=K339755662, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=REPORT_MEMBER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserController，方法：createUser
-2025-08-09 20:19:08 [http-nio-8080-exec-9] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:19:08 [http-nio-8080-exec-9] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
-2025-08-09 20:19:08 [http-nio-8080-exec-9] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1090001 for request：/api/user/create
-2025-08-09 20:19:08 [http-nio-8080-exec-9] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1090001 is expiring soon
-2025-08-09 20:19:08 [http-nio-8080-exec-9] WARN  c.t.c.e.GlobalExceptionHandler - 資料格式錯誤：JSON parse error: Cannot deserialize value of type `com.testing_company.case_management.enums.Role` from String "CASE_HANDLER": not one of the values accepted for Enum class: [CASE_HANDLE_MEMBER, REPORT_MEMBER, SUSPENDED, LAB_MEMBER, RESIGNED, LAB_MANAGER, HR_MEMBER, ADMIN, USER, LAB_LEADER]
-2025-08-09 20:19:08 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.testing_company.case_management.enums.Role` from String "CASE_HANDLER": not one of the values accepted for Enum class: [CASE_HANDLE_MEMBER, REPORT_MEMBER, SUSPENDED, LAB_MEMBER, RESIGNED, LAB_MANAGER, HR_MEMBER, ADMIN, USER, LAB_LEADER]]
-2025-08-09 20:19:16 [http-nio-8080-exec-10] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:19:16 [http-nio-8080-exec-10] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
-2025-08-09 20:19:16 [http-nio-8080-exec-10] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1090001 for request：/api/user/create
-2025-08-09 20:19:16 [http-nio-8080-exec-10] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1090001 is expiring soon
-2025-08-09 20:19:16 [http-nio-8080-exec-10] INFO  c.t.c.controller.UserController - [收到請求]建立User：RegisterRequestDTO(name=李家堂, sex=MALE, idNumber=K339755662, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=CASE_HANDLE_MEMBER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserController，方法：createUser
-2025-08-09 20:19:16 [http-nio-8080-exec-10] INFO  c.t.c.service.UserService - [收到請求]建立User：RegisterRequestDTO(name=李家堂, sex=MALE, idNumber=K339755662, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=CASE_HANDLE_MEMBER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserService，方法：createUser
-2025-08-09 20:19:16 [http-nio-8080-exec-10] INFO  c.t.c.service.UserService - [回覆請求]建立User：RegisterRequestDTO(name=李家堂, sex=MALE, idNumber=K339755662, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=CASE_HANDLE_MEMBER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserService，方法：createUser
-2025-08-09 20:19:16 [http-nio-8080-exec-10] INFO  c.t.c.controller.UserController - [回覆請求]建立User：RegisterRequestDTO(name=李家堂, sex=MALE, idNumber=K339755662, birthday=1987-01-27, phone=0955666777, emailPrivate=weiton@example.com, emailCompany=null, employeeNumber=EMP00136, jobLevelId=1, teamId=3, role=CASE_HANDLE_MEMBER, hiredAt=2025-08-09, lastModifiedById=null)	[來自]類別：UserController，方法：createUser
-2025-08-09 20:23:02 [http-nio-8080-exec-4] INFO  c.t.c.controller.AuthController - Login attempt for user：1040002
-2025-08-09 20:23:02 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1040002	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:23:02 [http-nio-8080-exec-4] ERROR c.t.c.service.UserDetailServiceImpl - User not found：1040002
-2025-08-09 20:23:03 [http-nio-8080-exec-4] WARN  c.t.c.controller.AuthController - Login failed for user 1040002: Invalid credentials
-2025-08-09 20:23:09 [http-nio-8080-exec-5] INFO  c.t.c.controller.AuthController - Login attempt for user：1140002
-2025-08-09 20:23:09 [http-nio-8080-exec-5] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1140002	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:23:09 [http-nio-8080-exec-5] INFO  c.t.c.service.UserDetailServiceImpl - User 1140002 laoded with role：CASE_HANDLE_MEMBER
-2025-08-09 20:23:23 [http-nio-8080-exec-6] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1140002	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:23:23 [http-nio-8080-exec-6] INFO  c.t.c.service.UserDetailServiceImpl - User 1140002 laoded with role：CASE_HANDLE_MEMBER
-2025-08-09 20:23:23 [http-nio-8080-exec-6] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1140002 for request：/api/customer/create
-2025-08-09 20:23:23 [http-nio-8080-exec-6] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1140002 is expiring soon
-2025-08-09 20:23:23 [http-nio-8080-exec-6] INFO  c.t.c.controller.CustomerController - [收到請求]建立Customer：[Customer(id=null, isCompany=true, name=大塚製藥股份有限公司, industryCategoryId=1, address=台北市信義區經貿二路66號, phone=02-2785-1122, lastModifiedById=null)]	[來自]類別：CustomerController，方法：createCustomer
-2025-08-09 20:23:23 [http-nio-8080-exec-6] INFO  c.t.c.service.CustomerService - [收到請求]建立Customer：[Customer(id=null, isCompany=true, name=大塚製藥股份有限公司, industryCategoryId=1, address=台北市信義區經貿二路66號, phone=02-2785-1122, lastModifiedById=null)]	[來自]類別：CustomerService，方法：createCustomer
-2025-08-09 20:23:23 [http-nio-8080-exec-6] INFO  c.t.c.service.CustomerService - [回覆請求]建立Customer：[Customer(id=6, isCompany=true, name=大塚製藥股份有限公司, industryCategoryId=1, address=台北市信義區經貿二路66號, phone=02-2785-1122, lastModifiedById=10)]	[來自]類別：CustomerService，方法：createCustomer
-2025-08-09 20:23:23 [http-nio-8080-exec-6] INFO  c.t.c.controller.CustomerController - [回覆請求]建立Customer：[Customer(id=6, isCompany=true, name=大塚製藥股份有限公司, industryCategoryId=1, address=台北市信義區經貿二路66號, phone=02-2785-1122, lastModifiedById=10)]	[來自]類別：CustomerController，方法：createCustomer
-2025-08-09 20:25:43 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-09 20:25:43 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-09 20:25:43 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 20:25:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-09 20:25:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-09 20:25:55 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 9764 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
-2025-08-09 20:25:55 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-09 20:25:55 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-09 20:25:55 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-09 20:25:58 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-09 20:25:59 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 268 ms. Found 10 JPA repository interfaces.
-2025-08-09 20:26:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-09 20:26:01 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-09 20:26:01 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-09 20:26:02 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-09 20:26:02 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6465 ms
-2025-08-09 20:26:03 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-09 20:26:04 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d9834ee
-2025-08-09 20:26:04 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-09 20:26:04 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
-2025-08-09 20:26:04 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
-2025-08-09 20:26:04 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.102s)
-2025-08-09 20:26:04 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
-2025-08-09 20:26:04 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
-2025-08-09 20:26:04 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-09 20:26:05 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-09 20:26:05 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-09 20:26:06 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-09 20:26:06 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-08-31 20:25:06 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-31 20:25:06 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-31 20:25:07 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-31 20:25:10 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
+2025-08-31 20:25:10 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-31 20:25:12 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-31 20:25:12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-31 20:25:12 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 21.583 seconds (process running for 22.881)
+2025-08-31 20:25:25 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-31 20:25:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-31 20:25:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-08-31 20:25:25 [http-nio-8080-exec-1] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
+2025-08-31 20:25:25 [http-nio-8080-exec-1] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
+2025-08-31 20:25:25 [http-nio-8080-exec-1] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1090001 for request：/api/user/create
+2025-08-31 20:25:25 [http-nio-8080-exec-1] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1090001 is expiring soon
+2025-08-31 20:25:26 [http-nio-8080-exec-1] INFO  c.t.c.controller.UserController - [收到請求]建立User：RegisterRequestDTO(name=炭志郎, sex=MALE, idNumber=K339755123, birthday=1987-01-27, phone=0955666777, emailPrivate=jilon@example.com, jobLevelId=1, teamId=2, role=LAB_MEMBER, hiredAt=2025-08-31)	[來自]類別：UserController，方法：createUser
+2025-08-31 20:25:26 [http-nio-8080-exec-1] INFO  c.t.c.service.UserService - [收到請求]建立User：RegisterRequestDTO(name=炭志郎, sex=MALE, idNumber=K339755123, birthday=1987-01-27, phone=0955666777, emailPrivate=jilon@example.com, jobLevelId=1, teamId=2, role=LAB_MEMBER, hiredAt=2025-08-31)	[來自]類別：UserService，方法：createUser
+2025-08-31 20:25:27 [http-nio-8080-exec-1] INFO  c.t.c.service.UserService - [回覆請求]建立User：RegisterRequestDTO(name=炭志郎, sex=MALE, idNumber=K339755123, birthday=1987-01-27, phone=0955666777, emailPrivate=jilon@example.com, jobLevelId=1, teamId=2, role=LAB_MEMBER, hiredAt=2025-08-31)	[來自]類別：UserService，方法：createUser
+2025-08-31 20:25:27 [http-nio-8080-exec-1] INFO  c.t.c.controller.UserController - [回覆請求]建立User：RegisterRequestDTO(name=炭志郎, sex=MALE, idNumber=K339755123, birthday=1987-01-27, phone=0955666777, emailPrivate=jilon@example.com, jobLevelId=1, teamId=2, role=LAB_MEMBER, hiredAt=2025-08-31)	[來自]類別：UserController，方法：createUser
+2025-08-31 21:32:21 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-31 21:32:21 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-31 21:32:21 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-31 21:32:21 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-31 21:32:21 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-31 21:32:32 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 9124 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
+2025-08-31 21:32:32 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-31 21:32:33 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-31 21:32:33 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-31 21:32:36 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-31 21:32:36 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 209 ms. Found 10 JPA repository interfaces.
+2025-08-31 21:32:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-31 21:32:39 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-31 21:32:39 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-31 21:32:39 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-31 21:32:39 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6660 ms
+2025-08-31 21:32:40 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-31 21:32:41 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15adfde0
+2025-08-31 21:32:41 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-31 21:32:41 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
+2025-08-31 21:32:41 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2025-08-31 21:32:41 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.118s)
+2025-08-31 21:32:41 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
+2025-08-31 21:32:41 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
+2025-08-31 21:32:41 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-31 21:32:42 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-31 21:32:42 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-31 21:32:43 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-31 21:32:43 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 9.3
@@ -335,463 +273,38 @@ java.lang.NoSuchMethodError: 'void org.springframework.web.method.ControllerAdvi
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-08-09 20:26:08 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-09 20:26:08 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 20:26:09 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-09 20:26:11 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
-2025-08-09 20:26:11 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-09 20:26:13 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-09 20:26:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-09 20:26:13 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 19.578 seconds (process running for 20.93)
-2025-08-09 20:26:36 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-09 20:26:36 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-09 20:26:36 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
-2025-08-09 20:26:36 [http-nio-8080-exec-2] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1140002	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:26:36 [http-nio-8080-exec-2] INFO  c.t.c.service.UserDetailServiceImpl - User 1140002 laoded with role：CASE_HANDLE_MEMBER
-2025-08-09 20:26:36 [http-nio-8080-exec-2] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1140002 for request：/api/pointOfContact/create
-2025-08-09 20:26:36 [http-nio-8080-exec-2] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1140002 is expiring soon
-2025-08-09 20:26:37 [http-nio-8080-exec-2] INFO  c.t.c.c.PointOfContactController - [收到請求]建立PointOfContact：PointOfContactController[PointOfContact(id=null, customerId=2, contactPerson=王大耀, contactPhone=0922-876-543, contactEmail=dahua.chen@example.com, contactAddress=台北市信義區市府路45號, lastModifiedById=null)]	[來自]類別：createPointOfContact，方法：{}
-2025-08-09 20:26:37 [http-nio-8080-exec-2] INFO  c.t.c.service.PointOfContactService - [收到請求]建立PointOfContact：PointOfContactService[PointOfContact(id=null, customerId=2, contactPerson=王大耀, contactPhone=0922-876-543, contactEmail=dahua.chen@example.com, contactAddress=台北市信義區市府路45號, lastModifiedById=null)]	[來自]類別：createPointOfContact，方法：{}
-2025-08-09 20:26:37 [http-nio-8080-exec-2] INFO  c.t.c.service.PointOfContactService - [回覆請求]建立PointOfContact：PointOfContactService[PointOfContact(id=2, customerId=2, contactPerson=王大耀, contactPhone=0922-876-543, contactEmail=dahua.chen@example.com, contactAddress=台北市信義區市府路45號, lastModifiedById=10)]	[來自]類別：createPointOfContact，方法：{}
-2025-08-09 20:26:37 [http-nio-8080-exec-2] INFO  c.t.c.c.PointOfContactController - [回覆請求]建立PointOfContact：PointOfContactController[PointOfContact(id=2, customerId=2, contactPerson=王大耀, contactPhone=0922-876-543, contactEmail=dahua.chen@example.com, contactAddress=台北市信義區市府路45號, lastModifiedById=10)]	[來自]類別：createPointOfContact，方法：{}
-2025-08-09 20:34:08 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-09 20:34:08 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-09 20:34:08 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 20:34:08 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-09 20:34:08 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-09 20:34:24 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 8280 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
-2025-08-09 20:34:24 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-09 20:34:24 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-09 20:34:24 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-09 20:34:26 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-09 20:34:27 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 218 ms. Found 10 JPA repository interfaces.
-2025-08-09 20:34:28 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-09 20:34:28 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-09 20:34:28 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-09 20:34:29 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-09 20:34:29 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4745 ms
-2025-08-09 20:34:29 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-09 20:34:30 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38c1205c
-2025-08-09 20:34:30 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-09 20:34:30 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
-2025-08-09 20:34:30 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
-2025-08-09 20:34:30 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.139s)
-2025-08-09 20:34:30 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
-2025-08-09 20:34:30 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
-2025-08-09 20:34:31 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-09 20:34:31 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-09 20:34:31 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-09 20:34:32 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-09 20:34:32 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 9.3
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-09 20:34:35 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-09 20:34:35 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 20:34:36 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-09 20:34:37 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
-2025-08-09 20:34:38 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-09 20:34:40 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-09 20:34:40 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-09 20:34:40 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 17.833 seconds (process running for 19.78)
-2025-08-09 20:35:18 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-09 20:35:18 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-09 20:35:18 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2025-08-09 20:35:35 [http-nio-8080-exec-3] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1140002	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:35:35 [http-nio-8080-exec-3] INFO  c.t.c.service.UserDetailServiceImpl - User 1140002 laoded with role：CASE_HANDLE_MEMBER
-2025-08-09 20:35:35 [http-nio-8080-exec-3] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1140002 for request：/api/testItem/create
-2025-08-09 20:35:35 [http-nio-8080-exec-3] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1140002 is expiring soon
-2025-08-09 20:35:36 [http-nio-8080-exec-3] INFO  c.t.c.controller.TestItemController - [收到請求]建立TestItem：TestItemController[TestItem(id=null, name=葉黃素含量分析, teamId=4, testingDays=8, testingPrice=2500.00, lastModifiedById=null, experimentOperatorId=3, experimentReviewerId=5, reportConductorId=6), TestItem(id=null, name=重金屬含量檢驗, teamId=4, testingDays=7, testingPrice=2200.00, lastModifiedById=1, experimentOperatorId=3, experimentReviewerId=5, reportConductorId=6), TestItem(id=null, name=防腐劑含量分析, teamId=4, testingDays=7, testingPrice=1300.00, lastModifiedById=1, experimentOperatorId=4, experimentReviewerId=5, reportConductorId=6), TestItem(id=null, name=食品添加物檢驗, teamId=6, testingDays=6, testingPrice=1800.00, lastModifiedById=1, experimentOperatorId=4, experimentReviewerId=5, reportConductorId=6), TestItem(id=null, name=微生物檢驗（大腸桿菌）, teamId=6, testingDays=7, testingPrice=1000.00, lastModifiedById=1, experimentOperatorId=4, experimentReviewerId=5, reportConductorId=6)]	[來自]類別：createTestItem，方法：{}
-2025-08-09 20:35:36 [http-nio-8080-exec-3] INFO  c.t.c.service.TestItemService - [收到請求]建立TestItem：TestItemService[TestItem(id=null, name=葉黃素含量分析, teamId=4, testingDays=8, testingPrice=2500.00, lastModifiedById=null, experimentOperatorId=3, experimentReviewerId=5, reportConductorId=6), TestItem(id=null, name=重金屬含量檢驗, teamId=4, testingDays=7, testingPrice=2200.00, lastModifiedById=1, experimentOperatorId=3, experimentReviewerId=5, reportConductorId=6), TestItem(id=null, name=防腐劑含量分析, teamId=4, testingDays=7, testingPrice=1300.00, lastModifiedById=1, experimentOperatorId=4, experimentReviewerId=5, reportConductorId=6), TestItem(id=null, name=食品添加物檢驗, teamId=6, testingDays=6, testingPrice=1800.00, lastModifiedById=1, experimentOperatorId=4, experimentReviewerId=5, reportConductorId=6), TestItem(id=null, name=微生物檢驗（大腸桿菌）, teamId=6, testingDays=7, testingPrice=1000.00, lastModifiedById=1, experimentOperatorId=4, experimentReviewerId=5, reportConductorId=6)]	[來自]類別：createTestItem，方法：{}
-2025-08-09 20:35:36 [http-nio-8080-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
-2025-08-09 20:35:36 [http-nio-8080-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry '重金屬含量檢驗' for key 'test_items.name_UNIQUE'
-2025-08-09 20:35:36 [http-nio-8080-exec-3] WARN  c.t.c.e.GlobalExceptionHandler - 資料庫錯誤：could not execute statement [Duplicate entry '重金屬含量檢驗' for key 'test_items.name_UNIQUE'] [insert into test_items (created_time,experiment_operator_id,experiment_reviewer_id,last_modified_by_id,last_modified_time,name,report_conductor_id,team_id,testing_days,testing_price) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into test_items (created_time,experiment_operator_id,experiment_reviewer_id,last_modified_by_id,last_modified_time,name,report_conductor_id,team_id,testing_days,testing_price) values (?,?,?,?,?,?,?,?,?,?)]; constraint [test_items.name_UNIQUE]
-2025-08-09 20:35:37 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Duplicate entry '重金屬含量檢驗' for key 'test_items.name_UNIQUE'] [insert into test_items (created_time,experiment_operator_id,experiment_reviewer_id,last_modified_by_id,last_modified_time,name,report_conductor_id,team_id,testing_days,testing_price) values (?,?,?,?,?,?,?,?,?,?)]; SQL [insert into test_items (created_time,experiment_operator_id,experiment_reviewer_id,last_modified_by_id,last_modified_time,name,report_conductor_id,team_id,testing_days,testing_price) values (?,?,?,?,?,?,?,?,?,?)]; constraint [test_items.name_UNIQUE]]
-2025-08-09 20:35:50 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1140002	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:35:50 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - User 1140002 laoded with role：CASE_HANDLE_MEMBER
-2025-08-09 20:35:50 [http-nio-8080-exec-4] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1140002 for request：/api/testItem/create
-2025-08-09 20:35:50 [http-nio-8080-exec-4] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1140002 is expiring soon
-2025-08-09 20:35:50 [http-nio-8080-exec-4] INFO  c.t.c.controller.TestItemController - [收到請求]建立TestItem：TestItemController[TestItem(id=null, name=葉黃素含量分析, teamId=4, testingDays=8, testingPrice=2500.00, lastModifiedById=null, experimentOperatorId=3, experimentReviewerId=5, reportConductorId=6)]	[來自]類別：createTestItem，方法：{}
-2025-08-09 20:35:50 [http-nio-8080-exec-4] INFO  c.t.c.service.TestItemService - [收到請求]建立TestItem：TestItemService[TestItem(id=null, name=葉黃素含量分析, teamId=4, testingDays=8, testingPrice=2500.00, lastModifiedById=null, experimentOperatorId=3, experimentReviewerId=5, reportConductorId=6)]	[來自]類別：createTestItem，方法：{}
-2025-08-09 20:35:50 [http-nio-8080-exec-4] INFO  c.t.c.service.TestItemService - [回覆請求]建立TestItem：TestItemService[TestItem(id=8, name=葉黃素含量分析, teamId=4, testingDays=8, testingPrice=2500.00, lastModifiedById=10, experimentOperatorId=3, experimentReviewerId=5, reportConductorId=6)]	[來自]類別：createTestItem，方法：{}
-2025-08-09 20:35:50 [http-nio-8080-exec-4] INFO  c.t.c.controller.TestItemController - [回覆請求]建立TestItem：TestItemController[TestItem(id=8, name=葉黃素含量分析, teamId=4, testingDays=8, testingPrice=2500.00, lastModifiedById=10, experimentOperatorId=3, experimentReviewerId=5, reportConductorId=6)]	[來自]類別：createTestItem，方法：{}
-2025-08-09 20:39:13 [http-nio-8080-exec-8] ERROR c.t.c.c.JWTAuthenticationFilter - JWT token is expired: JWT expired 64852 milliseconds ago at 2025-08-09T12:38:09.000Z. Current time: 2025-08-09T12:39:13.852Z. Allowed clock skew: 0 milliseconds.
-2025-08-09 20:39:19 [http-nio-8080-exec-9] INFO  c.t.c.controller.AuthController - Login attempt for user：1140002
-2025-08-09 20:39:19 [http-nio-8080-exec-9] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1140002	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:39:19 [http-nio-8080-exec-9] INFO  c.t.c.service.UserDetailServiceImpl - User 1140002 laoded with role：CASE_HANDLE_MEMBER
-2025-08-09 20:39:30 [http-nio-8080-exec-10] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1140002	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:39:30 [http-nio-8080-exec-10] INFO  c.t.c.service.UserDetailServiceImpl - User 1140002 laoded with role：CASE_HANDLE_MEMBER
-2025-08-09 20:39:30 [http-nio-8080-exec-10] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1140002 for request：/api/testCase/createTestCases
-2025-08-09 20:39:30 [http-nio-8080-exec-10] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1140002 is expiring soon
-2025-08-09 20:39:30 [http-nio-8080-exec-10] INFO  c.t.c.controller.TestCaseController - [收到請求]建立TestCase：TestCaseController[TestCase(id=null, testCaseNumber=null, customerId=6, pointOfContactId=2, sampleName=土壤樣本 B, testItemId=1, testingDays=null, testingPrice=null, caseStartTime=null, experimentEndTime=null, experimentReviewTime=null, reportCloseTime=null, labDeadline=null, reportDeadline=null, experimentOperatorId=null, experimentReviewerId=null, reportConductorId=null, testResult=null, caseStatus=null, sampleStatus=null, sampleOriginalWeight=0.0, sampleRemainingWeight=0.0, caseHandlerId=null, note=null, lastModifiedById=null)]	[來自]類別：createTestCases，方法：{}
-2025-08-09 20:39:30 [http-nio-8080-exec-10] INFO  c.t.c.service.TestCaseService - [收到請求]建立TestCase：TestCaseService[TestCase(id=null, testCaseNumber=null, customerId=6, pointOfContactId=2, sampleName=土壤樣本 B, testItemId=1, testingDays=null, testingPrice=null, caseStartTime=null, experimentEndTime=null, experimentReviewTime=null, reportCloseTime=null, labDeadline=null, reportDeadline=null, experimentOperatorId=null, experimentReviewerId=null, reportConductorId=null, testResult=null, caseStatus=null, sampleStatus=null, sampleOriginalWeight=0.0, sampleRemainingWeight=0.0, caseHandlerId=null, note=null, lastModifiedById=null)]	[來自]類別：createTestCases，方法：{}
-2025-08-09 20:39:30 [http-nio-8080-exec-10] INFO  c.t.c.service.TestCaseService - [回覆請求]建立TestCase：TestCaseService[TestCase(id=11, testCaseNumber=FD0000011, customerId=6, pointOfContactId=2, sampleName=土壤樣本 B, testItemId=1, testingDays=8, testingPrice=1500.00, caseStartTime=null, experimentEndTime=null, experimentReviewTime=null, reportCloseTime=null, labDeadline=null, reportDeadline=null, experimentOperatorId=3, experimentReviewerId=5, reportConductorId=6, testResult=null, caseStatus=CASE_CREATED, sampleStatus=AWAITING_DELIVERY, sampleOriginalWeight=0.0, sampleRemainingWeight=0.0, caseHandlerId=10, note=null, lastModifiedById=10)]	[來自]類別：createTestCases，方法：{}
-2025-08-09 20:39:30 [http-nio-8080-exec-10] INFO  c.t.c.controller.TestCaseController - [回覆請求]建立TestCase：TestCaseController[TestCase(id=11, testCaseNumber=FD0000011, customerId=6, pointOfContactId=2, sampleName=土壤樣本 B, testItemId=1, testingDays=8, testingPrice=1500.00, caseStartTime=null, experimentEndTime=null, experimentReviewTime=null, reportCloseTime=null, labDeadline=null, reportDeadline=null, experimentOperatorId=3, experimentReviewerId=5, reportConductorId=6, testResult=null, caseStatus=CASE_CREATED, sampleStatus=AWAITING_DELIVERY, sampleOriginalWeight=0.0, sampleRemainingWeight=0.0, caseHandlerId=10, note=null, lastModifiedById=10)]	[來自]類別：createTestCases，方法：{}
-2025-08-09 20:41:13 [http-nio-8080-exec-3] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1140002	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:41:13 [http-nio-8080-exec-3] INFO  c.t.c.service.UserDetailServiceImpl - User 1140002 laoded with role：CASE_HANDLE_MEMBER
-2025-08-09 20:41:13 [http-nio-8080-exec-3] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1140002 for request：/api/testCase/start/11/500
-2025-08-09 20:41:13 [http-nio-8080-exec-3] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1140002 is expiring soon
-2025-08-09 20:41:13 [http-nio-8080-exec-3] INFO  c.t.c.controller.TestCaseController - [收到請求]啟動TestCase_ID：TestCaseController11	[來自]類別：startTestCase，方法：{}
-2025-08-09 20:41:13 [http-nio-8080-exec-3] INFO  c.t.c.service.TestCaseService - [收到請求]啟動TestCase_ID：TestCaseService11	[來自]類別：startTestCase，方法：{}
-2025-08-09 20:41:13 [http-nio-8080-exec-3] INFO  c.t.c.service.TestCaseService - [回覆請求]啟動TestCase_ID：TestCaseService11	[來自]類別：startTestCase，方法：{}
-2025-08-09 20:41:14 [http-nio-8080-exec-3] INFO  c.t.c.controller.TestCaseController - [回覆請求]啟動TestCase_ID：TestCaseController11	[來自]類別：startTestCase，方法：{}
-2025-08-09 20:44:29 [http-nio-8080-exec-7] INFO  c.t.c.controller.AuthController - Login attempt for user：1080001
-2025-08-09 20:44:29 [http-nio-8080-exec-7] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1080001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:44:29 [http-nio-8080-exec-7] INFO  c.t.c.service.UserDetailServiceImpl - User 1080001 laoded with role：LAB_MEMBER
-2025-08-09 20:44:58 [http-nio-8080-exec-6] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1080001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:44:58 [http-nio-8080-exec-6] INFO  c.t.c.service.UserDetailServiceImpl - User 1080001 laoded with role：LAB_MEMBER
-2025-08-09 20:44:58 [http-nio-8080-exec-6] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1080001 for request：/api/testCase/findRelatedToUser
-2025-08-09 20:44:58 [http-nio-8080-exec-6] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1080001 is expiring soon
-2025-08-09 20:44:58 [http-nio-8080-exec-6] INFO  c.t.c.controller.TestCaseController - [收到請求]找尋特定條件TestCase：FindTestCaseByCustomRequestDTO(caseStartDate=2025-08-01, caseStartDateTime=2025-08-01T00:00, caseEndDate=2025-08-09, caseEndDateTime=2025-08-10T00:00, caseStatus=[], teamId=null, isMine=false, experiment_operator_id=null, experiment_reviewer_id=null, report_conductor_id=null)	[來自]類別：TestCaseController，方法：findRelatedToUser
-2025-08-09 20:44:58 [http-nio-8080-exec-6] INFO  c.t.c.service.TestCaseService - [收到請求]找尋特定條件TestCase：FindTestCaseByCustomRequestDTO(caseStartDate=2025-08-01, caseStartDateTime=2025-08-01T00:00, caseEndDate=2025-08-09, caseEndDateTime=2025-08-10T00:00, caseStatus=[], teamId=null, isMine=false, experiment_operator_id=null, experiment_reviewer_id=null, report_conductor_id=null)	[來自]類別：TestCaseService，方法：findRelatedToUser
-2025-08-09 20:44:59 [http-nio-8080-exec-6] INFO  c.t.c.service.TestCaseService - [回覆請求]找尋特定條件TestCase：FindTestCaseByCustomRequestDTO(caseStartDate=2025-08-01, caseStartDateTime=2025-08-01T00:00, caseEndDate=2025-08-09, caseEndDateTime=2025-08-10T00:00, caseStatus=[], teamId=null, isMine=false, experiment_operator_id=null, experiment_reviewer_id=null, report_conductor_id=null)	[來自]類別：TestCaseService，方法：findRelatedToUser
-2025-08-09 20:44:59 [http-nio-8080-exec-6] INFO  c.t.c.controller.TestCaseController - [回覆請求]找尋特定條件TestCase：[TestCaseWithTestItemResponseDTO(testCaseNumber=FD0000001, sampleName=有機米樣品, testItem=農藥殘留檢驗, caseStartTime=2025-08-06T22:29:49, labDeadline=2025-08-12T22:29:49, reportDeadline=2025-08-14T22:29:49, experimentOperator=1080001吳農耀3(食品-農藥組), experimentReviewer=1060001馮組長俊麟5(食品-組長), reportConductor=1050001李苞皓(行政-報告組), caseStatus=IN_PROGRESS, team=食品農藥組), TestCaseWithTestItemResponseDTO(testCaseNumber=FD0000002, sampleName=罐頭食品, testItem=重金屬含量檢驗, caseStartTime=2025-08-07T21:52:50, labDeadline=2025-08-12T21:52:50, reportDeadline=2025-08-14T21:52:50, experimentOperator=1080001吳農耀3(食品-農藥組), experimentReviewer=1060001馮組長俊麟5(食品-組長), reportConductor=1050001李苞皓(行政-報告組), caseStatus=IN_PROGRESS, team=食品農藥組), TestCaseWithTestItemResponseDTO(testCaseNumber=FD0000011, sampleName=土壤樣本 B, testItem=農藥殘留檢驗, caseStartTime=2025-08-09T20:41:14, labDeadline=2025-08-15T20:41:14, reportDeadline=2025-08-17T20:41:14, experimentOperator=1080001吳農耀3(食品-農藥組), experimentReviewer=1060001馮組長俊麟5(食品-組長), reportConductor=1050001李苞皓(行政-報告組), caseStatus=IN_PROGRESS, team=食品農藥組)]	[來自]類別：TestCaseController，方法：findRelatedToUser
-2025-08-09 20:46:56 [http-nio-8080-exec-10] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1080001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 20:46:56 [http-nio-8080-exec-10] INFO  c.t.c.service.UserDetailServiceImpl - User 1080001 laoded with role：LAB_MEMBER
-2025-08-09 20:46:56 [http-nio-8080-exec-10] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1080001 for request：/api/testCase/submitToReview/1/%E5%90%88%E6%A0%BC
-2025-08-09 20:46:56 [http-nio-8080-exec-10] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1080001 is expiring soon
-2025-08-09 20:46:56 [http-nio-8080-exec-10] INFO  c.t.c.controller.TestCaseController - [收到請求]提交TestCase_ID：TestCaseController至審核1	[來自]類別：submitTestCaseToReview，方法：{}
-2025-08-09 20:46:56 [http-nio-8080-exec-10] INFO  c.t.c.service.TestCaseService - [收到請求]提交TestCase_ID：TestCaseService至審核1	[來自]類別：submitTestCaseToReview，方法：{}
-2025-08-09 20:46:56 [http-nio-8080-exec-10] INFO  c.t.c.service.TestCaseService - [回覆請求]提交TestCase_ID：TestCaseService至審核1	[來自]類別：submitTestCaseToReview，方法：{}
-2025-08-09 20:46:56 [http-nio-8080-exec-10] INFO  c.t.c.controller.TestCaseController - [回覆請求]提交TestCase_ID：TestCaseController至審核1	[來自]類別：submitTestCaseToReview，方法：{}
-2025-08-09 21:14:13 [http-nio-8080-exec-4] INFO  c.t.c.controller.AuthController - Login attempt for user：1080001
-2025-08-09 21:14:13 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1080001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 21:14:13 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - User 1080001 laoded with role：LAB_MEMBER
-2025-08-09 21:14:25 [http-nio-8080-exec-5] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1080001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 21:14:25 [http-nio-8080-exec-5] INFO  c.t.c.service.UserDetailServiceImpl - User 1080001 laoded with role：LAB_MEMBER
-2025-08-09 21:14:25 [http-nio-8080-exec-5] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1080001 for request：/api/testCase/withdrawToExperiment/11
-2025-08-09 21:14:25 [http-nio-8080-exec-5] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1080001 is expiring soon
-2025-08-09 21:14:25 [http-nio-8080-exec-5] INFO  c.t.c.controller.TestCaseController - [收到請求]退回TestCase_ID：TestCaseController至實驗11	[來自]類別：withdrawTestCaseToExperiment，方法：{}
-2025-08-09 21:14:25 [http-nio-8080-exec-5] INFO  c.t.c.service.TestCaseService - [收到請求]退回TestCase_ID：TestCaseService至實驗11	[來自]類別：withdrawTestCaseToExperiment，方法：{}
-2025-08-09 21:14:25 [http-nio-8080-exec-5] INFO  c.t.c.service.TestCaseService - [回覆請求]退回TestCase_ID：TestCaseService至實驗11	[來自]類別：withdrawTestCaseToExperiment，方法：{}
-2025-08-09 21:14:25 [http-nio-8080-exec-5] INFO  c.t.c.controller.TestCaseController - [回覆請求]退回TestCase_ID：TestCaseController至實驗11	[來自]類別：withdrawTestCaseToExperiment，方法：{}
-2025-08-09 21:17:49 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
-2025-08-09 21:17:49 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-09 21:17:49 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-09 21:17:49 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 21:17:49 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-09 21:17:49 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-09 21:17:50 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 8280 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
-2025-08-09 21:17:50 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-09 21:17:51 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-09 21:17:51 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 113 ms. Found 10 JPA repository interfaces.
-2025-08-09 21:17:51 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-09 21:17:51 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-09 21:17:51 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-09 21:17:51 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-09 21:17:51 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1715 ms
-2025-08-09 21:17:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-2025-08-09 21:17:52 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18939aee
-2025-08-09 21:17:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-2025-08-09 21:17:52 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
-2025-08-09 21:17:52 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
-2025-08-09 21:17:52 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.139s)
-2025-08-09 21:17:52 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
-2025-08-09 21:17:52 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
-2025-08-09 21:17:53 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-09 21:17:53 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-09 21:17:53 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-09 21:17:53 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
-	Database driver: undefined/unknown
-	Database version: 9.3
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-09 21:17:53 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-09 21:17:54 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 21:17:54 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
-2025-08-09 21:17:54 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testCaseController': Resolution of declared constructors on bean Class [com.testing_company.case_management.controller.TestCaseController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7d77f836] failed
-2025-08-09 21:17:54 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 21:17:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
-2025-08-09 21:17:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
-2025-08-09 21:17:54 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2025-08-09 21:17:54 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-08-09 21:17:54 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testCaseController': Resolution of declared constructors on bean Class [com.testing_company.case_management.controller.TestCaseController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7d77f836] failed
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:384)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1334)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1229)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.testing_company.case_management.CaseManagementApplication.main(CaseManagementApplication.java:10)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: java.lang.NoClassDefFoundError: com/testing_company/case_management/service/TestCaseService
-	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
-	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3373)
-	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2555)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:379)
-	... 25 common frames omitted
-Caused by: java.lang.ClassNotFoundException: com.testing_company.case_management.service.TestCaseService
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:467)
-	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	... 29 common frames omitted
-2025-08-09 21:17:58 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 8280 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
-2025-08-09 21:17:58 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-09 21:17:59 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-09 21:18:00 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 112 ms. Found 10 JPA repository interfaces.
-2025-08-09 21:18:00 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-09 21:18:00 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-09 21:18:00 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-09 21:18:00 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-09 21:18:00 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2372 ms
-2025-08-09 21:18:00 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
-2025-08-09 21:18:01 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e5d0867
-2025-08-09 21:18:01 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
-2025-08-09 21:18:01 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
-2025-08-09 21:18:01 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
-2025-08-09 21:18:01 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.130s)
-2025-08-09 21:18:01 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
-2025-08-09 21:18:01 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
-2025-08-09 21:18:02 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-09 21:18:02 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-09 21:18:02 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-09 21:18:02 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
-	Database driver: undefined/unknown
-	Database version: 9.3
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-09 21:18:03 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-09 21:18:03 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 4904 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
-2025-08-09 21:18:03 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-09 21:18:03 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 21:18:03 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-09 21:18:03 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-09 21:18:04 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
-2025-08-09 21:18:06 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-09 21:18:07 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-09 21:18:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-09 21:18:07 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 9.367 seconds (process running for 2627.343)
-2025-08-09 21:18:07 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2025-08-09 21:18:09 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-09 21:18:09 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 256 ms. Found 10 JPA repository interfaces.
-2025-08-09 21:18:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-09 21:18:11 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-09 21:18:11 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-09 21:18:12 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-09 21:18:12 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8100 ms
-2025-08-09 21:18:12 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-09 21:18:13 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49a6a90b
-2025-08-09 21:18:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-09 21:18:14 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
-2025-08-09 21:18:14 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
-2025-08-09 21:18:14 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.291s)
-2025-08-09 21:18:14 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
-2025-08-09 21:18:14 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
-2025-08-09 21:18:15 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-09 21:18:15 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-09 21:18:15 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-09 21:18:16 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-09 21:18:16 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 9.3
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-09 21:18:19 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-09 21:18:19 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 21:18:20 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-09 21:18:22 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
-2025-08-09 21:18:22 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-09 21:18:24 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
-2025-08-09 21:18:24 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2025-08-09 21:18:24 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 21:18:24 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-09 21:18:24 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-09 21:18:24 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-08-09 21:18:24 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2025-08-09 21:18:46 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-09 21:18:46 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-09 21:18:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 21:18:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
-2025-08-09 21:18:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
-2025-08-09 21:18:54 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 6468 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
-2025-08-09 21:18:54 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-09 21:18:54 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-09 21:18:54 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-09 21:18:58 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-09 21:18:59 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 364 ms. Found 10 JPA repository interfaces.
-2025-08-09 21:19:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-09 21:19:01 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-09 21:19:01 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-09 21:19:01 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-09 21:19:01 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6930 ms
-2025-08-09 21:19:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-09 21:19:03 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d9834ee
-2025-08-09 21:19:03 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-09 21:19:03 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
-2025-08-09 21:19:03 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
-2025-08-09 21:19:03 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.157s)
-2025-08-09 21:19:04 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
-2025-08-09 21:19:04 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
-2025-08-09 21:19:04 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-09 21:19:05 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-09 21:19:05 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-09 21:19:06 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-09 21:19:06 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 9.3
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-09 21:19:09 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-09 21:19:09 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 21:19:10 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-09 21:19:12 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
-2025-08-09 21:19:13 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-09 21:19:14 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-09 21:19:14 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-09 21:19:14 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 22.152 seconds (process running for 23.665)
-2025-08-09 21:20:08 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-09 21:20:08 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-09 21:20:08 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2025-08-09 21:20:09 [http-nio-8080-exec-1] ERROR c.t.c.c.JWTAuthenticationFilter - JWT token is expired: JWT expired 1239069 milliseconds ago at 2025-08-09T12:59:30.000Z. Current time: 2025-08-09T13:20:09.069Z. Allowed clock skew: 0 milliseconds.
-2025-08-09 21:20:14 [http-nio-8080-exec-3] INFO  c.t.c.controller.AuthController - Login attempt for user：1080001
-2025-08-09 21:20:15 [http-nio-8080-exec-3] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1080001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 21:20:15 [http-nio-8080-exec-3] INFO  c.t.c.service.UserDetailServiceImpl - User 1080001 laoded with role：LAB_MEMBER
-2025-08-09 21:20:26 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1080001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 21:20:26 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - User 1080001 laoded with role：LAB_MEMBER
-2025-08-09 21:20:26 [http-nio-8080-exec-4] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1080001 for request：/api/testCase/submitToReview/11/%E5%90%88%E6%A0%BC
-2025-08-09 21:20:26 [http-nio-8080-exec-4] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1080001 is expiring soon
-2025-08-09 21:20:26 [http-nio-8080-exec-4] INFO  c.t.c.controller.TestCaseController - [收到請求]提交TestCase_ID：TestCaseController至審核11	[來自]類別：submitTestCaseToReview，方法：{}
-2025-08-09 21:20:26 [http-nio-8080-exec-4] INFO  c.t.c.service.TestCaseService - [收到請求]提交TestCase_ID：TestCaseService至審核11	[來自]類別：submitTestCaseToReview，方法：{}
-2025-08-09 21:20:26 [http-nio-8080-exec-4] INFO  c.t.c.service.TestCaseService - [回覆請求]提交TestCase_ID：TestCaseService至審核11	[來自]類別：submitTestCaseToReview，方法：{}
-2025-08-09 21:20:26 [http-nio-8080-exec-4] INFO  c.t.c.controller.TestCaseController - [回覆請求]提交TestCase_ID：TestCaseController至審核11	[來自]類別：submitTestCaseToReview，方法：{}
-2025-08-09 21:22:06 [http-nio-8080-exec-6] INFO  c.t.c.controller.AuthController - Login attempt for user：1060001
-2025-08-09 21:22:06 [http-nio-8080-exec-6] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1060001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 21:22:06 [http-nio-8080-exec-6] INFO  c.t.c.service.UserDetailServiceImpl - User 1060001 laoded with role：LAB_LEADER
-2025-08-09 21:22:23 [http-nio-8080-exec-8] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1060001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 21:22:23 [http-nio-8080-exec-8] INFO  c.t.c.service.UserDetailServiceImpl - User 1060001 laoded with role：LAB_LEADER
-2025-08-09 21:22:23 [http-nio-8080-exec-8] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1060001 for request：/api/testCase/submitToReport/1
-2025-08-09 21:22:23 [http-nio-8080-exec-8] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1060001 is expiring soon
-2025-08-09 21:22:23 [http-nio-8080-exec-8] INFO  c.t.c.controller.TestCaseController - [收到請求]提交TestCase_ID：TestCaseController至報告組1	[來自]類別：submitTestCaseToReport，方法：{}
-2025-08-09 21:22:23 [http-nio-8080-exec-8] INFO  c.t.c.service.TestCaseService - [收到請求]提交TestCase_ID：TestCaseService至報告組1	[來自]類別：submitTestCaseToReport，方法：{}
-2025-08-09 21:22:23 [http-nio-8080-exec-8] INFO  c.t.c.service.TestCaseService - [回覆請求]提交TestCase_ID：TestCaseService至報告組1	[來自]類別：submitTestCaseToReport，方法：{}
-2025-08-09 21:22:23 [http-nio-8080-exec-8] INFO  c.t.c.controller.TestCaseController - [回覆請求]提交TestCase_ID：TestCaseController至報告組1	[來自]類別：submitTestCaseToReport，方法：{}
-2025-08-09 21:22:28 [http-nio-8080-exec-9] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1060001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 21:22:28 [http-nio-8080-exec-9] INFO  c.t.c.service.UserDetailServiceImpl - User 1060001 laoded with role：LAB_LEADER
-2025-08-09 21:22:28 [http-nio-8080-exec-9] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1060001 for request：/api/testCase/submitToReport/11
-2025-08-09 21:22:28 [http-nio-8080-exec-9] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1060001 is expiring soon
-2025-08-09 21:22:28 [http-nio-8080-exec-9] INFO  c.t.c.controller.TestCaseController - [收到請求]提交TestCase_ID：TestCaseController至報告組11	[來自]類別：submitTestCaseToReport，方法：{}
-2025-08-09 21:22:28 [http-nio-8080-exec-9] INFO  c.t.c.service.TestCaseService - [收到請求]提交TestCase_ID：TestCaseService至報告組11	[來自]類別：submitTestCaseToReport，方法：{}
-2025-08-09 21:22:28 [http-nio-8080-exec-9] INFO  c.t.c.service.TestCaseService - [回覆請求]提交TestCase_ID：TestCaseService至報告組11	[來自]類別：submitTestCaseToReport，方法：{}
-2025-08-09 21:22:28 [http-nio-8080-exec-9] INFO  c.t.c.controller.TestCaseController - [回覆請求]提交TestCase_ID：TestCaseController至報告組11	[來自]類別：submitTestCaseToReport，方法：{}
-2025-08-09 21:25:08 [http-nio-8080-exec-1] INFO  c.t.c.controller.AuthController - Login attempt for user：1050001
-2025-08-09 21:25:08 [http-nio-8080-exec-1] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1050001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 21:25:08 [http-nio-8080-exec-1] INFO  c.t.c.service.UserDetailServiceImpl - User 1050001 laoded with role：REPORT_MEMBER
-2025-08-09 21:25:36 [http-nio-8080-exec-3] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1050001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 21:25:36 [http-nio-8080-exec-3] INFO  c.t.c.service.UserDetailServiceImpl - User 1050001 laoded with role：REPORT_MEMBER
-2025-08-09 21:25:36 [http-nio-8080-exec-3] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1050001 for request：/api/testCase/finishReport/11
-2025-08-09 21:25:36 [http-nio-8080-exec-3] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1050001 is expiring soon
-2025-08-09 21:25:36 [http-nio-8080-exec-3] INFO  c.t.c.controller.TestCaseController - [收到請求]完成TestCase_ID：TestCaseController之報告11	[來自]類別：finishTestCaseReport，方法：{}
-2025-08-09 21:25:36 [http-nio-8080-exec-3] INFO  c.t.c.service.TestCaseService - [收到請求]完成TestCase_ID：TestCaseService之報告11	[來自]類別：finishTestCaseReport，方法：{}
-2025-08-09 21:25:36 [http-nio-8080-exec-3] INFO  c.t.c.service.TestCaseService - [回覆請求]完成TestCase_ID：TestCaseService之報告11	[來自]類別：finishTestCaseReport，方法：{}
-2025-08-09 21:25:37 [http-nio-8080-exec-3] INFO  c.t.c.controller.TestCaseController - [回覆請求]完成TestCase_ID：TestCaseController之報告11	[來自]類別：finishTestCaseReport，方法：{}
-2025-08-09 22:44:05 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-09 22:44:06 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-09 22:44:06 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 22:44:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-09 22:44:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-09 22:44:12 [restartedMain] INFO  c.t.c.CaseManagementApplication - Starting CaseManagementApplication using Java 17.0.13 with PID 16692 (C:\Users\daisy\Downloads\case-management\case-management\target\classes started by root in C:\Users\daisy\Downloads\case-management\case-management)
-2025-08-09 22:44:12 [restartedMain] INFO  c.t.c.CaseManagementApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-09 22:44:12 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-09 22:44:12 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-09 22:44:15 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-09 22:44:16 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 224 ms. Found 10 JPA repository interfaces.
-2025-08-09 22:44:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-09 22:44:18 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-09 22:44:18 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-09 22:44:18 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-09 22:44:18 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5710 ms
-2025-08-09 22:44:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-09 22:44:19 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e5daaa7
-2025-08-09 22:44:20 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-09 22:44:20 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/testing_company_case_db?useUnicode=true&characterEncoding=UTF-8 (MySQL 9.3)
-2025-08-09 22:44:20 [restartedMain] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 9.3 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
-2025-08-09 22:44:20 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.163s)
-2025-08-09 22:44:20 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `testing_company_case_db`: 1
-2025-08-09 22:44:20 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema `testing_company_case_db` is up to date. No migration necessary.
-2025-08-09 22:44:21 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-09 22:44:21 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-09 22:44:21 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-09 22:44:21 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-09 22:44:22 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 9.3
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-09 22:44:25 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-09 22:44:25 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 22:44:26 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-09 22:44:27 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
-2025-08-09 22:44:28 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-09 22:44:29 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-09 22:44:29 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-09 22:44:29 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 19.451 seconds (process running for 20.593)
-2025-08-09 22:44:58 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-09 22:44:58 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-09 22:44:58 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-09 22:44:59 [http-nio-8080-exec-1] INFO  c.t.c.controller.AuthController - Login attempt for user：1050001
-2025-08-09 22:44:59 [http-nio-8080-exec-1] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1050001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
-2025-08-09 22:45:00 [http-nio-8080-exec-1] INFO  c.t.c.service.UserDetailServiceImpl - User 1050001 laoded with role：REPORT_MEMBER
-2025-08-09 22:45:04 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-09 22:45:04 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-09 22:45:04 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-09 22:45:04 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-09 22:45:04 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-31 21:32:45 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-31 21:32:45 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-31 21:32:46 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-31 21:32:47 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
+2025-08-31 21:32:48 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-31 21:32:49 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-31 21:32:49 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-31 21:32:49 [restartedMain] INFO  c.t.c.CaseManagementApplication - Started CaseManagementApplication in 18.504 seconds (process running for 19.68)
+2025-08-31 21:32:52 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-31 21:32:52 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-31 21:32:52 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-08-31 21:32:52 [http-nio-8080-exec-2] INFO  c.t.c.controller.AuthController - Login attempt for user：1090001
+2025-08-31 21:32:53 [http-nio-8080-exec-2] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
+2025-08-31 21:32:53 [http-nio-8080-exec-2] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
+2025-08-31 21:33:39 [http-nio-8080-exec-3] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
+2025-08-31 21:33:39 [http-nio-8080-exec-3] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
+2025-08-31 21:33:39 [http-nio-8080-exec-3] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1090001 for request：/api/user/create
+2025-08-31 21:33:39 [http-nio-8080-exec-3] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1090001 is expiring soon
+2025-08-31 21:33:39 [http-nio-8080-exec-3] INFO  c.t.c.controller.UserController - [收到請求]建立User：RegisterRequestDTO(name=炫窩名人, sex=MALE, idNumber=K339755123, birthday=1987-01-27, phone=0955666777, emailPrivate=naruto@example.com, jobLevelId=1, teamId=2, role=LAB_MEMBER, hiredAt=2025-08-31)	[來自]類別：UserController，方法：createUser
+2025-08-31 21:33:39 [http-nio-8080-exec-3] INFO  c.t.c.service.UserService - [收到請求]建立User：RegisterRequestDTO(name=炫窩名人, sex=MALE, idNumber=K339755123, birthday=1987-01-27, phone=0955666777, emailPrivate=naruto@example.com, jobLevelId=1, teamId=2, role=LAB_MEMBER, hiredAt=2025-08-31)	[來自]類別：UserService，方法：createUser
+2025-08-31 21:33:39 [http-nio-8080-exec-3] WARN  c.t.c.e.GlobalExceptionHandler - 資料重複：身分證字號已存在資料庫，請確認資料是否重複建立
+2025-08-31 21:33:39 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.testing_company.case_management.exception.DuplicateException: 身分證字號已存在資料庫，請確認資料是否重複建立]
+2025-08-31 21:33:49 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - [收到請求]Loading user details for username：1090001	[來自]類別：UserDetailServiceImpl，方法：loadUserByUsername
+2025-08-31 21:33:49 [http-nio-8080-exec-4] INFO  c.t.c.service.UserDetailServiceImpl - User 1090001 laoded with role：HR_MEMBER
+2025-08-31 21:33:49 [http-nio-8080-exec-4] INFO  c.t.c.c.JWTAuthenticationFilter - Successfully authenticated user：1090001 for request：/api/user/create
+2025-08-31 21:33:49 [http-nio-8080-exec-4] INFO  c.t.c.c.JWTAuthenticationFilter - JWT token for user 1090001 is expiring soon
+2025-08-31 21:33:49 [http-nio-8080-exec-4] INFO  c.t.c.controller.UserController - [收到請求]建立User：RegisterRequestDTO(name=炫窩名人, sex=MALE, idNumber=K439755123, birthday=1987-01-27, phone=0955666777, emailPrivate=naruto@example.com, jobLevelId=1, teamId=2, role=LAB_MEMBER, hiredAt=2025-08-31)	[來自]類別：UserController，方法：createUser
+2025-08-31 21:33:49 [http-nio-8080-exec-4] INFO  c.t.c.service.UserService - [收到請求]建立User：RegisterRequestDTO(name=炫窩名人, sex=MALE, idNumber=K439755123, birthday=1987-01-27, phone=0955666777, emailPrivate=naruto@example.com, jobLevelId=1, teamId=2, role=LAB_MEMBER, hiredAt=2025-08-31)	[來自]類別：UserService，方法：createUser
+2025-08-31 21:33:49 [http-nio-8080-exec-4] INFO  c.t.c.service.UserService - [回覆請求]建立User：RegisterRequestDTO(name=炫窩名人, sex=MALE, idNumber=K439755123, birthday=1987-01-27, phone=0955666777, emailPrivate=naruto@example.com, jobLevelId=1, teamId=2, role=LAB_MEMBER, hiredAt=2025-08-31)	[來自]類別：UserService，方法：createUser
+2025-08-31 21:33:49 [http-nio-8080-exec-4] INFO  c.t.c.controller.UserController - [回覆請求]建立User：RegisterRequestDTO(name=炫窩名人, sex=MALE, idNumber=K439755123, birthday=1987-01-27, phone=0955666777, emailPrivate=naruto@example.com, jobLevelId=1, teamId=2, role=LAB_MEMBER, hiredAt=2025-08-31)	[來自]類別：UserController，方法：createUser
+2025-08-31 22:18:45 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-31 22:18:46 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-31 22:18:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-31 22:18:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-31 22:18:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,8 +1,7 @@
 package com.testing_company.case_management.service;
 
-import com.testing_company.case_management.dto.RegisterRequestDTO;
-import com.testing_company.case_management.dto.TeamResponseDTO;
-import com.testing_company.case_management.dto.UserResponseDTO;
+import com.testing_company.case_management.dto.requestDTO.RegisterRequestDTO;
+import com.testing_company.case_management.dto.responseDTO.UserResponseDTO;
 import com.testing_company.case_management.enums.Role;
 import com.testing_company.case_management.exception.DuplicateException;
 import com.testing_company.case_management.exception.NotFoundException;
@@ -18,22 +17,17 @@ import com.testing_company.case_management.util.BeanUtil;
 import com.testing_company.case_management.util.LogUtils;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.dao.DataIntegrityViolationException;
+import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
-import java.util.function.Function;
 
 import static com.testing_company.case_management.util.BeanUtil.findIfIdPresent;
 
@@ -46,7 +40,7 @@ public class UserService {
     private final DepartmentRepository departmentRepository;
     private final TeamRepository teamRepository;
     private final PasswordEncoder passwordEncoder;
-    public User createUser(RegisterRequestDTO registerRequestDTO){
+    public UserResponseDTO createUser(RegisterRequestDTO registerRequestDTO){
         LogUtils.logRequest(log,this,"建立User：{}",registerRequestDTO);
         Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
         String currentUsername=authentication.getName();
@@ -68,32 +62,25 @@ public class UserService {
         }
 
         String employeeNumber=prefix+String.format("%04d",nextNumber);
-        User createdUser=new User();
-        createdUser.setName(registerRequestDTO.getName());
-        if(registerRequestDTO.getSex()!=null){createdUser.setSex(registerRequestDTO.getSex());}
-        createdUser.setIdNumber(registerRequestDTO.getIdNumber());
-        if(registerRequestDTO.getBirthday()!=null){createdUser.setBirthday(registerRequestDTO.getBirthday());}
-        if(registerRequestDTO.getPhone()!=null){createdUser.setPhone(registerRequestDTO.getPhone());}
-        if(registerRequestDTO.getEmailPrivate()!=null){createdUser.setEmailPrivate(registerRequestDTO.getEmailPrivate());}
-        createdUser.setEmailCompany(employeeNumber+"@company.com");
-        createdUser.setEmployeeNumber(employeeNumber);
-        if(registerRequestDTO.getJobLevelId()!=null){createdUser.setJobLevelId(registerRequestDTO.getJobLevelId());}else {createdUser.setJobLevelId(1L);}
-        if(registerRequestDTO.getTeamId()!=null){createdUser.setTeamId(registerRequestDTO.getTeamId());}
-        if(registerRequestDTO.getRole()!=null){createdUser.setRole(registerRequestDTO.getRole());}else {createdUser.setRole(Role.USER);}
-        createdUser.setHiredAt(registerRequestDTO.getHiredAt());
-        createdUser.setUsername(employeeNumber);
-        createdUser.setPassword(passwordEncoder.encode(registerRequestDTO.getIdNumber().substring(8,10)));
-        if(currentUser!=null){createdUser.setLastModifiedById(currentUser.getId());};
+        ModelMapper mapper=new ModelMapper();
+        mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+        User userToSave=mapper.map(registerRequestDTO, User.class);
 
-        userRepository.save(createdUser);
+        userToSave.setEmailCompany(employeeNumber+"@company.com");
+        userToSave.setEmployeeNumber(employeeNumber);
+        userToSave.setUsername(employeeNumber);
+        userToSave.setPassword(passwordEncoder.encode(registerRequestDTO.getIdNumber().substring(8,10)));
+        if(currentUser!=null){userToSave.setLastModifiedById(currentUser.getId());};
+
+        userRepository.save(userToSave);
         LogUtils.logResponse(log,this,"建立User：{}",registerRequestDTO);
-        return createdUser;
+        return convertToDTO(userToSave);
     }
-    public List<User> createUsers(List<RegisterRequestDTO> registerRequestDTO){
+    public List<UserResponseDTO> createUsers(List<RegisterRequestDTO> registerRequestDTO){
         LogUtils.logRequest(log,this,"建立User：{}",registerRequestDTO);
-//        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
-//        String currentUsername=authentication.getName();
-//        User currentUser=userRepository.findByUsername(currentUsername).orElseThrow(()->new NotFoundException("找不到使用者"));
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername=authentication.getName();
+        User currentUser=userRepository.findByUsername(currentUsername).orElseThrow(()->new NotFoundException("找不到使用者"));
         List<User>createdUsers=new ArrayList<>();
         for(RegisterRequestDTO r:registerRequestDTO){
             int TaiwanYear=r.getHiredAt().getYear()-1911;
@@ -113,50 +100,25 @@ public class UserService {
 
             String employeeNumber=prefix+String.format("%04d",nextNumber);
             User createdUser=new User();
-            createdUser.setName(r.getName());
-            if(r.getSex()!=null){createdUser.setSex(r.getSex());}
-            createdUser.setIdNumber(r.getIdNumber());
-            if(r.getBirthday()!=null){createdUser.setBirthday(r.getBirthday());}
-            if(r.getPhone()!=null){createdUser.setPhone(r.getPhone());}
-            if(r.getEmailPrivate()!=null){createdUser.setEmailPrivate(r.getEmailPrivate());}
+            ModelMapper mapper=new ModelMapper();
+            mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+            mapper.map(r,User.class);
+
             createdUser.setEmailCompany(employeeNumber+"@company.com");
             createdUser.setEmployeeNumber(employeeNumber);
-            if(r.getJobLevelId()!=null){createdUser.setJobLevelId(r.getJobLevelId());}else {createdUser.setJobLevelId(1L);}
-            if(r.getTeamId()!=null){createdUser.setTeamId(r.getTeamId());}
-            if(r.getRole()!=null){createdUser.setRole(r.getRole());}else {createdUser.setRole(Role.USER);}
-            createdUser.setHiredAt(r.getHiredAt());
             createdUser.setUsername(employeeNumber);
             createdUser.setPassword(passwordEncoder.encode(r.getIdNumber().substring(8,10)));
-//        if(createdUser!=null){createdUser.setLastModifiedById(currentUser.getId());};
+            if(currentUser!=null){createdUser.setLastModifiedById(currentUser.getId());};
 
             userRepository.save(createdUser);
             createdUsers.add(createdUser);
         }
 
         LogUtils.logResponse(log,this,"建立User：{}",registerRequestDTO);
-        return createdUsers;
+        return createdUsers.stream().map(this::convertToDTO).toList();
     }
 
-//    public User createUser(User user){
-//        LogUtils.logRequest(log,this,"建立User：{}",user);
-//
-//        int TaiwanYear=user.getHiredAt().getYear()-1911;
-//
-//        String prefix=String.format("%03d",TaiwanYear);
-//
-//        String latestNumber=userRepository.findMaxEmployeeNumberByPrefix(prefix+"%");
-//
-//        int nextNumber=1;
-//        if(latestNumber!=null){
-//            String lastDigits=latestNumber.substring(3);
-//            nextNumber=Integer.parseInt(lastDigits)+1;
-//        }
-//        String employeeNumber=prefix+String.format("%04d",nextNumber);
-//        user.setEmployeeNumber(employeeNumber);
-//        User createdUser=userRepository.save(user);
-//        LogUtils.logResponse(log,this,"建立User：{}",user);
-//        return createdUser;
-//    }
+
     public UserResponseDTO findUserById(Long userId){
         LogUtils.logRequest(log,this,"尋找User_ID：{}",userId);
         User foundUser=userRepository.findById(userId).orElseThrow(()->new NotFoundException("找不到ID為"+userId+"之User"));
@@ -182,9 +144,9 @@ public class UserService {
                 .emailPrivate(user.getEmailPrivate())
                 .emailCompany(user.getEmailCompany())
                 .employeeNumber(user.getEmployeeNumber())
-                .jobLevel(jobLevel!=null?jobLevel.getJobLevel():null)
-                .department(department!=null?department.getDepartment():null)
-                .team(team!=null?team.getTeam():null)
+                .jobLevel(jobLevel!=null?jobLevel.getJobLevelNameInChinese():null)
+                .department(department!=null?department.getDepartmentNameInChinese():null)
+                .team(team!=null?team.getTeamNameInChinese():null)
                 .role(user.getRole())
                 .hiredAt(user.getHiredAt())
                 .createdTime(user.getCreatedTime())
